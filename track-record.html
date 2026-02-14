@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Record | Alexis Bendavid - Résultats Mesurables</title>
+    <meta name="description" content="Références clients : PMU, Société Générale, Bouygues, Crédit Agricole. Résultats mesurables et impact prouvé.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-black: #0A0A0A;
+            --primary-white: #FAFAFA;
+            --gray-dark: #2A2A2A;
+            --gray-medium: #666666;
+            --gray-light: #E5E5E5;
+            --accent-blue: #0066CC;
+            --accent-gold: #B8986E;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-white);
+            color: var(--primary-black);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 250, 250, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-light);
+            z-index: 1000;
+            padding: 1.5rem 5%;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-black);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--gray-medium);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-black);
+        }
+        
+        .hero-track {
+            padding: 180px 0 100px;
+            text-align: center;
+        }
+        
+        .hero-track h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-track p {
+            font-size: 1.25rem;
+            color: var(--gray-medium);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .case-study {
+            padding: 100px 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+        
+        .case-study:nth-child(even) {
+            background: #F8F8F8;
+        }
+        
+        .case-header {
+            margin-bottom: 3rem;
+        }
+        
+        .company-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .case-meta {
+            color: var(--gray-medium);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .case-intro {
+            font-size: 1.15rem;
+            color: var(--gray-dark);
+            line-height: 1.8;
+            max-width: 900px;
+        }
+        
+        .case-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .case-section {
+            background: white;
+            padding: 2.5rem;
+            border: 1px solid var(--gray-light);
+        }
+        
+        .section-title {
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .case-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .case-section ul {
+            list-style: none;
+        }
+        
+        .case-section li {
+            padding: 0.6rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+            font-size: 0.95rem;
+            color: var(--gray-dark);
+        }
+        
+        .case-section li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+        
+        .metrics-highlight {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            padding: 3rem;
+            background: var(--primary-black);
+            color: white;
+        }
+        
+        .metric {
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: var(--primary-black);
+            color: white;
+        }
+        
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-white {
+            display: inline-block;
+            padding: 1.1rem 2.5rem;
+            background: white;
+            color: var(--primary-black);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        
+        .cta-white:hover {
+            background: var(--accent-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--gray-light);
+            text-align: center;
+        }
+        
+        .copyright {
+            color: var(--gray-medium);
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 968px) {
+            .case-content,
+            .metrics-highlight {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-track h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">ALEXIS BENDAVID</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="track-record.html">Track Record</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-track">
+            <div class="container">
+                <h1>Track Record & Références</h1>
+                <p>
+                    Une expertise forgée auprès d'organisations exigeantes dans des contextes 
+                    à enjeux critiques. Résultats mesurables et impact durable.
+                </p>
+            </div>
+        </section>
+
+        <!-- Case Study 1 : PMU -->
+        <section class="case-study">
+            <div class="container">
+                <div class="case-header">
+                    <h2 class="company-name">PMU</h2>
+                    <div class="case-meta">
+                        Expert Scrum Master / Release Train Engineer • 2023-2024 • Fintech Régulé
+                    </div>
+                    <p class="case-intro">
+                        Pilotage d'un programme digital critique sous régulation ANJ (Autorité Nationale des Jeux), 
+                        avec coordination de 8 squads (60+ personnes) sur roadmap stratégique incluant 
+                        Traces ANJ réglementaires, Virement Instantané, et refonte architecture paiements.
+                    </p>
+                </div>
+
+                <div class="case-content">
+                    <div class="case-section">
+                        <div class="section-title">Contexte & Défis</div>
+                        <h3>Environnement Hautement Contraint</h3>
+                        <ul>
+                            <li>Régulation ANJ stricte (conformité obligatoire)</li>
+                            <li>8 équipes avec dépendances complexes</li>
+                            <li>Releases critiques 0 downtime</li>
+                            <li>Coordination Product-Engineering-SRE</li>
+                            <li>Vélocité à maintenir sous contraintes</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <div class="section-title">Approche Déployée</div>
+                        <h3>Méthodologie RTE & IA</h3>
+                        <ul>
+                            <li>PI Planning trimestriels synchronisés</li>
+                            <li>Scrum of Scrums quotidiens</li>
+                            <li>Coaching Scrum Masters & Tech Leads</li>
+                            <li>Intégration GenAI pour analyse dépendances</li>
+                            <li>Gouvernance adaptative COMEX</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <div class="section-title">Technologies Utilisées</div>
+                        <h3>Stack & Outils</h3>
+                        <ul>
+                            <li>SAFe 6 framework</li>
+                            <li>Jira Align pour gouvernance</li>
+                            <li>GenAI pour génération specs</li>
+                            <li>Obeya rooms physiques & digitales</li>
+                            <li>Dashboards temps réel</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="metrics-highlight">
+                    <div class="metric">
+                        <div class="metric-value">>95%</div>
+                        <div class="metric-label">Prédictibilité Delivery</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">+60pts</div>
+                        <div class="metric-label">Vélocité Augmentée</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">-40%</div>
+                        <div class="metric-label">Incidents Post-Release</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Conformité ANJ</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study 2 : Société Générale -->
+        <section class="case-study">
+            <div class="container">
+                <div class="case-header">
+                    <h2 class="company-name">Société Générale</h2>
+                    <div class="case-meta">
+                        Scrum Master SAFe • 2022-2023 • Corporate & Investment Banking
+                    </div>
+                    <p class="case-intro">
+                        Pilotage agile de 3 équipes pluridisciplinaires (25+ personnes) sur refonte 
+                        plateforme trading, avec harmonisation des pratiques agiles hétérogènes 
+                        et amélioration significative de la fiabilité des engagements PI.
+                    </p>
+                </div>
+
+                <div class="case-content">
+                    <div class="case-section">
+                        <div class="section-title">Contexte & Défis</div>
+                        <h3>Transformation CIB</h3>
+                        <ul>
+                            <li>Pratiques agiles disparates à unifier</li>
+                            <li>Fiabilité engagements PI insuffisante</li>
+                            <li>Dette technique importante</li>
+                            <li>Coordination inter-équipes faible</li>
+                            <li>Contexte bancaire conservateur</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <div class="section-title">Approche Déployée</div>
+                        <h3>Coaching & Harmonisation</h3>
+                        <ul>
+                            <li>Audit pratiques agiles existantes</li>
+                            <li>Animation cérémonies SAFe</li>
+                            <li>Coaching Product Owners intensif</li>
+                            <li>Rituels synchronisation inter-équipes</li>
+                            <li>Métriques prédictibilité PI</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <div class="section-title">Résultats</div>
+                        <h3>Impact Mesurable</h3>
+                        <ul>
+                            <li>+35% fiabilité engagements PI</li>
+                            <li>Pratiques harmonisées 3 équipes</li>
+                            <li>Dette technique réduite</li>
+                            <li>NPS interne +28 points</li>
+                            <li>Vélocité stabilisée</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study 3 : Bouygues Telecom -->
+        <section class="case-study">
+            <div class="container">
+                <div class="case-header">
+                    <h2 class="company-name">Bouygues Telecom</h2>
+                    <div class="case-meta">
+                        Coach Agile Delivery • 2021-2022 • Transformation Digitale
+                    </div>
+                    <p class="case-intro">
+                        Unification de 77 workflows Jira disparates en un MVP cohérent, 
+                        avec pilotage stratégique de la trajectoire produit sur 18 mois 
+                        et amélioration significative de l'engagement équipes.
+                    </p>
+                </div>
+
+                <div class="case-content">
+                    <div class="case-section">
+                        <div class="section-title">Contexte & Défis</div>
+                        <h3>Complexité Organisationnelle</h3>
+                        <ul>
+                            <li>77 workflows Jira fragmentés</li>
+                            <li>Besoins métiers hétérogènes</li>
+                            <li>Résistance au changement forte</li>
+                            <li>Dette organisationnelle importante</li>
+                            <li>Visibilité roadmap faible</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <div class="section-title">Approche Déployée</div>
+                        <h3>Design Thinking & Agile</h3>
+                        <ul>
+                            <li>Ateliers collaboratifs multi-métiers</li>
+                            <li>Design thinking sur workflows</li>
+                            <li>Création MVP workflow unifié</li>
+                            <li>Déploiement progressif avec coaching</li>
+                            <li>Formation continue équipes</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <div class="section-title">Résultats</div>
+                        <h3>Impact Business</h3>
+                        <ul>
+                            <li>77 → 1 workflow MVP cohérent</li>
+                            <li>-30% time-to-market</li>
+                            <li>+25pts engagement équipes</li>
+                            <li>Visibilité roadmap améliorée</li>
+                            <li>Adoption réussie change</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study 4 : Crédit Agricole -->
+        <section class="case-study">
+            <div class="container">
+                <div class="case-header">
+                    <h2 class="company-name">Crédit Agricole CIB</h2>
+                    <div class="case-meta">
+                        Transformation Digitale • 2020-2021 • Déploiement SAFe à l'Échelle
+                    </div>
+                    <p class="case-intro">
+                        Synchronisation et orchestration de 10 équipes (80+ personnes) avec déploiement 
+                        SAFe réussi en moins de 6 mois dans un contexte bancaire conservateur, 
+                        incluant gouvernance CODIR avec Obeya et cockpit KPIs stratégiques.
+                    </p>
+                </div>
+
+                <div class="case-content">
+                    <div class="case-section">
+                        <div class="section-title">Contexte & Défis</div>
+                        <h3>Transformation Profonde</h3>
+                        <ul>
+                            <li>Culture bancaire traditionnelle</li>
+                            <li>10 équipes non synchronisées</li>
+                            <li>Absence gouvernance agile</li>
+                            <li>Résistance management</li>
+                            <li>Silos organisationnels forts</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <div class="section-title">Approche Déployée</div>
+                        <h3>SAFe & Change Management</h3>
+                        <ul>
+                            <li>100+ ateliers de transformation</li>
+                            <li>Création Obeya rooms</li>
+                            <li>Cockpits KPIs stratégiques</li>
+                            <li>Coaching managers & leaders</li>
+                            <li>Conduite changement culturel</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <div class="section-title">Résultats</div>
+                        <h3>Succès Transformation</h3>
+                        <ul>
+                            <li>Adoption SAFe <6 mois</li>
+                            <li>10 équipes synchronisées (80+ pers)</li>
+                            <li>Gouvernance CODIR opérationnelle</li>
+                            <li>100+ ateliers menés</li>
+                            <li>Culture amélioration continue installée</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Obtenez des Résultats Similaires</h2>
+                <p style="max-width: 700px; margin: 0 auto 3rem; color: rgba(255,255,255,0.8); font-size: 1.1rem;">
+                    Démarrons par un MVP gratuit pour identifier vos quick wins 
+                    et construire une roadmap de transformation sur-mesure.
+                </p>
+                <a href="contact.html" class="cta-white">Demander un MVP Gratuit</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                © 2026 Alexis Bendavid • Strategic Transformation & AI Advisory • Place Vendôme, Paris
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

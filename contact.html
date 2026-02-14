@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Alexis Bendavid</title>
+<meta name="description" content="MVP gratuit. Place Vendôme, Paris. alexis.bendavid@gmail.com">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --primary-black:#0A0A0A;
+  --primary-white:#FAFAFA;
+  --gray-dark:#2A2A2A;
+  --gray-medium:#666666;
+  --gray-light:#E5E5E5;
+  --accent-blue:#0066CC;
+}
+body { font-family:'Inter',sans-serif; background:var(--primary-white); color:var(--primary-black); font-size:18px; line-height:1.6; }
+.container { max-width:1200px; margin:0 auto; padding:0 5%; }
+header { position:fixed; top:0; width:100%; background:rgba(250,250,250,0.95); backdrop-filter:blur(10px); border-bottom:1px solid var(--gray-light); z-index:1000; padding:1.5rem 5%; }
+nav { display:flex; justify-content:space-between; align-items:center; }
+.logo { font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:500; color:var(--primary-black); text-decoration:none; }
+.nav-links { display:flex; gap:3rem; list-style:none; }
+.nav-links a { color:var(--gray-medium); text-decoration:none; font-size:0.95rem; transition:color 0.3s ease; }
+.nav-links a:hover { color:var(--primary-black); }
+
+main { padding-top:100px; }
+
+.hero-contact { padding:60px 0 40px; text-align:center; }
+.hero-contact h1 { font-family:'Playfair Display',serif; font-size:3.5rem; font-weight:400; margin-bottom:1rem; }
+.hero-contact p { font-size:1.1rem; color:var(--gray-medium); margin-bottom:2rem; }
+.mvp-badge { display:inline-block; padding:0.6rem 1.5rem; background:var(--primary-black); color:white; font-size:0.9rem; font-weight:500; margin-bottom:3rem; }
+
+.contact-grid { display:grid; grid-template-columns:1fr; gap:2rem; padding:60px 0; }
+.contact-info h2 { font-size:1.5rem; margin-bottom:2rem; }
+.contact-item { margin-bottom:2rem; }
+.contact-label { font-size:0.8rem; color:var(--gray-medium); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:0.3rem; }
+.contact-value { font-size:1.05rem; color:var(--primary-black); font-weight:500; }
+.contact-value a { color:var(--primary-black); text-decoration:none; transition:color 0.3s ease; }
+.contact-value a:hover { color:var(--accent-blue); }
+.office-box { padding:1.5rem; background:#F8F8F8; border-left:2px solid var(--primary-black); margin-top:2rem; }
+.office-box h3 { font-size:1.1rem; margin-bottom:0.5rem; }
+.office-box p { font-size:0.95rem; color:var(--gray-medium); }
+
+.map-section { padding:60px 0; background:#F8F8F8; }
+.map-container h2 { font-family:'Playfair Display',serif; font-size:2.5rem; text-align:center; margin-bottom:2rem; }
+.map-embed { width:100%; height:450px; border:1px solid var(--gray-light); }
+
+footer { padding:40px 0; border-top:1px solid var(--gray-light); text-align:center; }
+footer .copyright { color:var(--gray-medium); font-size:0.85rem; }
+
+@media (max-width:968px) {
+  .hero-contact h1 { font-size:2.5rem; }
+  .nav-links { display:none; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <nav>
+    <a href="index.html" class="logo">ALEXIS BENDAVID</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="expertise.html">Expertise</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="track-record.html">Track Record</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section class="hero-contact">
+  <div class="container">
+    <h1>Contact</h1>
+    <p>MVP gratuit • Tarification sur-mesure ensuite</p>
+    <div class="mvp-badge">Consultation initiale offerte</div>
+  </div>
+</section>
+
+<section>
+<div class="container">
+<div class="contact-grid">
+
+<!-- Coordonnées -->
+<div class="contact-info">
+  <h2>Coordonnées</h2>
+  <div class="contact-item">
+    <div class="contact-label">Email</div>
+    <div class="contact-value"><a href="mailto:alexis.bendavid@gmail.com">alexis.bendavid@gmail.com</a></div>
+  </div>
+  <div class="contact-item">
+    <div class="contact-label">Téléphone</div>
+    <div class="contact-value"><a href="tel:+33680551836">+33 6 80 55 18 36</a></div>
+  </div>
+  <div class="contact-item">
+    <div class="contact-label">LinkedIn</div>
+    <div class="contact-value"><a href="https://linkedin.com/in/alexis-bendavid" target="_blank">alexis-bendavid</a></div>
+  </div>
+  <div class="office-box">
+    <h3>📍 Bureaux</h3>
+    <p><strong>Place Vendôme</strong><br>75001 Paris</p>
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Map -->
+<section class="map-section">
+<div class="container">
+<div class="map-container">
+<h2>Place Vendôme, Paris</h2>
+<iframe class="map-embed"
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.526198799417!2d2.331797315674121!3d48.867492079287834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x7a7f1dcb1c35a0b1!2sPlace%20Vend%C3%B4me%2C%2075001%20Paris%2C%20France!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
+allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+<div class="copyright">
+© 2026 Alexis Bendavid • Place Vendôme, Paris
+</div>
+</div>
+</footer>
+
+</body>
+</html>
