@@ -2,40 +2,479 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Expertise | Alexis Bendavid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expertise & Technologies | Alexis Bendavid</title>
+    <meta name="description" content="Expertise de pointe : Claude Opus 4.6, Moltbolt, B-mad, rtrvr.ai. 15+ certifications SAFe, IA, LLMOps.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <style>
-        :root { --bg: #050505; --gold: #D4AF37; --text: #FFFFFF; --dim: #888; --border: #1A1A1A; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
-        .nav-back { color: var(--dim); text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; }
-        .tech-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; }
-        .tech-card { background: #0A0A0A; border: 1px solid var(--border); padding: 2.5rem; }
-        .tech-card h3 { color: var(--gold); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 1rem; text-transform: uppercase; }
-        .tech-card p { color: var(--dim); font-size: 0.95rem; line-height: 1.6; }
-        .cert-table { width: 100%; border-collapse: collapse; margin-top: 4rem; }
-        .cert-table td { padding: 1.2rem 0; border-bottom: 1px solid #111; color: var(--dim); }
-        .cert-table .gold-text { color: var(--gold); font-weight: bold; width: 200px; font-size: 0.9rem; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-black: #0A0A0A;
+            --primary-white: #FAFAFA;
+            --gray-dark: #2A2A2A;
+            --gray-medium: #666666;
+            --gray-light: #E5E5E5;
+            --accent-blue: #0066CC;
+            --accent-gold: #B8986E;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-white);
+            color: var(--primary-black);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 250, 250, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-light);
+            z-index: 1000;
+            padding: 1.5rem 5%;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: var(--primary-black);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--gray-medium);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-black);
+        }
+        
+        .hero-expertise {
+            padding: 180px 0 100px;
+            text-align: center;
+        }
+        
+        .hero-expertise h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+        
+        .hero-expertise p {
+            font-size: 1.25rem;
+            color: var(--gray-medium);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        .tech-section {
+            padding: 100px 0;
+            background: #F8F8F8;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+        
+        .tech-card {
+            background: white;
+            padding: 3rem;
+            border: 1px solid var(--gray-light);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+        }
+        
+        .tech-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--primary-black);
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        
+        .tech-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tech-card p {
+            color: var(--gray-medium);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tech-card ul {
+            list-style: none;
+        }
+        
+        .tech-card li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.8rem;
+            color: var(--gray-dark);
+        }
+        
+        .tech-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+        
+        .certif-section {
+            padding: 100px 0;
+        }
+        
+        .certif-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .certif-category {
+            padding: 2.5rem;
+            background: #F8F8F8;
+            border-left: 3px solid var(--accent-blue);
+        }
+        
+        .certif-category h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-black);
+        }
+        
+        .certif-list {
+            list-style: none;
+        }
+        
+        .certif-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--gray-light);
+            color: var(--gray-dark);
+            font-size: 0.95rem;
+        }
+        
+        .certif-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .year {
+            color: var(--accent-gold);
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-left: 0.5rem;
+        }
+        
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: var(--primary-black);
+            color: white;
+        }
+        
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-white {
+            display: inline-block;
+            padding: 1.1rem 2.5rem;
+            background: white;
+            color: var(--primary-black);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        
+        .cta-white:hover {
+            background: var(--accent-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--gray-light);
+            text-align: center;
+        }
+        
+        .copyright {
+            color: var(--gray-medium);
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 968px) {
+            .tech-grid,
+            .certif-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-expertise h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="nav-back">← RETOUR ACCUEIL</a>
-        <h1 style="font-size: 3.5rem; font-weight: 300; margin: 2rem 0; letter-spacing: -2px;">TECH <span style="color:var(--gold)">STACK</span></h1>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">ALEXIS BENDAVID</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="tech-grid">
-            <div class="tech-card"><h3>Claude Opus 4.6</h3><p>Maîtrise des LLMs SOTA pour les raisonnements stratégiques et l'analyse de données non structurées.</p></div>
-            <div class="tech-card"><h3>Moltbot Agents</h3><p>Conception et orchestration d'agents autonomes pour l'automatisation proactive des métiers.</p></div>
-            <div class="tech-card"><h3>RAG & Knowledge</h3><p>Architecture rtrvr.ai pour l'exploitation sécurisée des bases de connaissances internes sans hallucination.</p></div>
-            <div class="tech-card"><h3>SAFe SPC 6.0</h3><p>Expertise certifiée pour le pilotage de trains agiles et la synchronisation de plus de 100 collaborateurs.</p></div>
+    <main>
+        <section class="hero-expertise">
+            <div class="container">
+                <h1>Expertise & Technologies de Pointe</h1>
+                <p>
+                    Maîtrise des technologies d'IA générative les plus avancées et certifications 
+                    reconnues internationalement pour garantir l'excellence de nos accompagnements.
+                </p>
+            </div>
+        </section>
+
+        <section class="tech-section">
+            <div class="container">
+                <h2 class="section-title">Technologies IA Cutting-Edge</h2>
+                
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <span class="tech-badge">Pointe 2026</span>
+                        <h3>Claude Opus 4.6</h3>
+                        <p>
+                            Maîtrise du modèle d'IA générative le plus avancé d'Anthropic (février 2026), 
+                            offrant des capacités de raisonnement, d'analyse et de génération supérieures 
+                            pour vos cas d'usage stratégiques.
+                        </p>
+                        <ul>
+                            <li>Context window étendu (200k+ tokens)</li>
+                            <li>Raisonnement multi-étapes avancé</li>
+                            <li>Génération de code production-ready</li>
+                            <li>Analyse de documents complexes</li>
+                            <li>Intégration APIs et outils externes</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-card">
+                        <span class="tech-badge">Agents IA</span>
+                        <h3>Moltbolt</h3>
+                        <p>
+                            Expertise approfondie en architecture d'agents IA autonomes via Moltbolt, 
+                            permettant la création de systèmes intelligents capables d'actions complexes 
+                            et de prise de décision autonome.
+                        </p>
+                        <ul>
+                            <li>Orchestration multi-agents</li>
+                            <li>Tool use et function calling avancés</li>
+                            <li>Chaînes de raisonnement (ReAct, Chain-of-Thought)</li>
+                            <li>Déploiement en production</li>
+                            <li>Monitoring et observabilité</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-card">
+                        <span class="tech-badge">RAG Avancé</span>
+                        <h3>rtrvr.ai</h3>
+                        <p>
+                            Implémentation de Retrieval-Augmented Generation (RAG) avec rtrvr.ai 
+                            pour enrichir les LLMs avec vos données métiers et garantir des réponses 
+                            contextuelles précises et fiables.
+                        </p>
+                        <ul>
+                            <li>Indexation sémantique de documents</li>
+                            <li>Recherche vectorielle haute performance</li>
+                            <li>Enrichissement de contexte dynamique</li>
+                            <li>Réduction des hallucinations</li>
+                            <li>Traçabilité des sources</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-card">
+                        <span class="tech-badge">Framework</span>
+                        <h3>B-mad</h3>
+                        <p>
+                            Utilisation de B-mad pour structurer et industrialiser le déploiement 
+                            d'applications IA en production, avec focus sur la scalabilité et 
+                            la maintenance long terme.
+                        </p>
+                        <ul>
+                            <li>Architecture modulaire et évolutive</li>
+                            <li>Gestion des prompts versionnés</li>
+                            <li>Pipelines d'inférence optimisés</li>
+                            <li>Monitoring coûts et performances</li>
+                            <li>Feedback loops et amélioration continue</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <p style="color: var(--gray-medium); font-size: 1.1rem; line-height: 1.7; max-width: 800px; margin: 0 auto;">
+                        <strong>Formation continue et veille technologique permanente</strong><br>
+                        Nous restons à la pointe des évolutions IA pour vous apporter 
+                        les solutions les plus performantes et adaptées à vos enjeux.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="certif-section">
+            <div class="container">
+                <h2 class="section-title">Certifications Professionnelles</h2>
+                <p style="text-align: center; color: var(--gray-medium); margin-bottom: 4rem; font-size: 1.1rem;">
+                    15+ certifications reconnues internationalement dans les domaines de l'agilité, 
+                    l'IA, et le coaching professionnel
+                </p>
+
+                <div class="certif-grid">
+                    <div class="certif-category">
+                        <h3>Transformation Agile</h3>
+                        <ul class="certif-list">
+                            <li>SAFe 6 RTE <span class="year">2024</span></li>
+                            <li>SAFe 6 SPC <span class="year">2024</span></li>
+                            <li>Professional Scrum Master PSM II <span class="year">2023</span></li>
+                            <li>Certified ScrumMaster (CSM) <span class="year">2022</span></li>
+                            <li>Manager Agile <span class="year">2023</span></li>
+                            <li>Lean Six Sigma Green Belt <span class="year">2021</span></li>
+                            <li>CMMI for Development <span class="year">2022</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="certif-category">
+                        <h3>Intelligence Artificielle</h3>
+                        <ul class="certif-list">
+                            <li>SAFe V6 - IA <span class="year">2025</span></li>
+                            <li>AI Career Empowerment <span class="year">2024</span></li>
+                            <li>Generative AI with LLMs <span class="year">2024</span></li>
+                            <li>Prompt Engineering <span class="year">2024</span></li>
+                            <li>LLMOps Fundamentals <span class="year">2025</span></li>
+                            <li>MLOps Specialization <span class="year">2024</span></li>
+                        </ul>
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--gray-light);">
+                            <strong style="font-size: 0.9rem; color: var(--gray-dark);">Expertise Autodidacte :</strong>
+                            <p style="font-size: 0.85rem; color: var(--gray-medium); margin-top: 0.5rem; line-height: 1.6;">
+                                Claude Opus 4.6, Moltbolt Agents IA, B-mad, rtrvr.ai (2025-2026)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="certif-category">
+                        <h3>Coaching & Développement</h3>
+                        <ul class="certif-list">
+                            <li>Coach Professionnel Certifié <span class="year">2023</span></li>
+                            <li>Conseiller en Image Certifié <span class="year">2024</span></li>
+                            <li>Automation Expert (N8N, Make) <span class="year">2024</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: #F8F8F8;">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1rem;">
+                        Formation Continue
+                    </h3>
+                    <p style="color: var(--gray-medium); line-height: 1.7; max-width: 700px; margin: 0 auto;">
+                        Engagement permanent de mise à jour des compétences via formations spécialisées, 
+                        conférences internationales, et expérimentation terrain sur projets réels. 
+                        Veille technologique quotidienne sur les évolutions IA, agile, et digital.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Bénéficiez de cette Expertise</h2>
+                <p style="max-width: 700px; margin: 0 auto 3rem; color: rgba(255,255,255,0.8); font-size: 1.1rem;">
+                    Démarrez avec un MVP gratuit pour tester nos technologies de pointe 
+                    sur votre cas d'usage spécifique, avant tout engagement.
+                </p>
+                <a href="contact.html" class="cta-white">Demander un MVP Gratuit</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                © 2026 Alexis Bendavid • Strategic Transformation & AI Advisory • Place Vendôme, Paris
+            </div>
         </div>
-
-        <h2 style="margin-top: 5rem; font-weight: 300; color: var(--gold); letter-spacing: 1px;">CERTIFICATIONS & FORMATIONS</h2>
-        <table class="cert-table">
-            <tr><td class="gold-text">SAFe Practice Consultant</td><td>Certification SPC 6.0 - Scaled Agile Inc.</td></tr>
-            <tr><td class="gold-text">Agile Product Management</td><td>Expertise certifiée APM</td></tr>
-            <tr><td class="gold-text">DeepLearning.ai</td><td>Spécialisation Intelligence Artificielle & LLM Ops</td></tr>
-            <tr><td class="gold-text">Lean Six Sigma</td><td>Optimisation des flux et excellence opérationnelle</td></tr>
-        </table>
-    </div>
+    </footer>
 </body>
 </html>
