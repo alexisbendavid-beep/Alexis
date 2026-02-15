@@ -2,35 +2,34 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Contact | Deploy MVP</title>
+    <title>Contact | Alexis Bendavid</title>
     <style>
-        :root { --bg: #050505; --card-bg: #0A0A0A; --accent: #3B82F6; --text: #F9FAFB; --text-dim: #9CA3AF; --border: #1F2937; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
-        .contact-card { background: var(--card-bg); border: 1px solid var(--border); padding: 4rem; border-radius: 30px; width: 100%; max-width: 600px; text-align: center; }
-        input, select, textarea { width: 100%; background: #111; border: 1px solid var(--border); padding: 1rem; color: #fff; border-radius: 10px; margin-bottom: 1.5rem; font-family: inherit; }
-        .cta-btn { background: var(--accent); color: white; border: none; padding: 1.2rem 2rem; border-radius: 50px; font-weight: 700; width: 100%; cursor: pointer; transition: 0.3s; }
-        .cta-btn:hover { filter: brightness(1.2); }
+        :root { --bg: #050505; --gold: #D4AF37; --text: #FFFFFF; --border: #1A1A1A; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); display: flex; align-items: center; justify-content: center; min-height: 100vh; margin:0; }
+        .card { border: 1px solid var(--gold); padding: 4rem; width: 100%; max-width: 500px; background: #000; text-align: center; }
+        input, select, textarea { width: 100%; background: #0A0A0A; border: 1px solid var(--border); padding: 1rem; color: #fff; margin-bottom: 1rem; }
+        .btn-gold { background: var(--gold); color: black; border: none; padding: 1.2rem; width: 100%; font-weight: 800; cursor: pointer; letter-spacing: 1px; }
+        .contact-link { display: block; margin-top: 1.5rem; color: var(--gold); text-decoration: none; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-    <div class="contact-card">
-        <h1 style="font-size: 2.5rem; letter-spacing: -2px; margin-bottom: 1rem;">Lancer votre <span style="color:var(--accent)">Agent</span></h1>
-        <p style="color: var(--text-dim); margin-bottom: 3rem;">Décrivez votre workflow, nous construisons le MVP.</p>
-        
+    <div class="card">
+        <h1 style="font-weight: 300; margin-bottom: 2rem;">INITIALISER LA <span style="color:var(--gold)">CONNEXION</span></h1>
         <form>
-            <input type="text" placeholder="Nom complet" required>
-            <input type="email" placeholder="Email professionnel" required>
+            <input type="text" placeholder="Nom complet">
+            <input type="email" placeholder="Email professionnel">
             <select>
-                <option>Diagnostic Moltbot</option>
-                <option>Déploiement rtrvr.ai</option>
-                <option>Conseil Stratégique</option>
+                <option>Diagnostic Stratégique</option>
+                <option>Agent Moltbot MVP</option>
             </select>
-            <textarea placeholder="Décrivez votre besoin en 2 phrases..." rows="4"></textarea>
-            <button type="submit" class="cta-btn">INITIALISER LA CONNEXION</button>
+            <textarea placeholder="Votre besoin..." rows="3"></textarea>
+            <button class="btn-gold">ENVOYER LA DEMANDE</button>
         </form>
-        <div style="margin-top: 2rem; font-size: 0.8rem; color: var(--text-dim);">
-            📍 Place Vendôme, Paris | +33 6 80 55 18 36
+        <div style="margin-top: 2rem; font-size: 0.8rem; color: #555;">
+            PLACE VENDÔME, PARIS<br>
+            +33 6 80 55 18 36
         </div>
+        <a href="index.html" class="contact-link">RETOUR À L'ACCUEIL</a>
     </div>
 </body>
 </html>

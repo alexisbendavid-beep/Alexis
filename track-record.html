@@ -2,48 +2,28 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Impact | Alexis Bendavid</title>
+    <title>Track Record | Alexis Bendavid</title>
     <style>
-        :root { --bg: #050505; --accent: #3B82F6; --text: #FFFFFF; --dim: #94A3B8; --border: #1E293B; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 4rem 2rem; }
-        .container { max-width: 800px; margin: 0 auto; }
-        .case { position: relative; padding-left: 3rem; margin-bottom: 5rem; border-left: 2px solid var(--accent); }
-        .case h2 { font-size: 2rem; margin-bottom: 1rem; }
-        .case p { color: var(--dim); margin-bottom: 1rem; }
-        .results { background: #0D0D0D; padding: 1.5rem; border-radius: 12px; font-family: monospace; color: #4ADE80; font-size: 0.9rem; }
+        :root { --bg: #050505; --gold: #D4AF37; --text: #FFFFFF; --dim: #888; --border: #1A1A1A; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+        .container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+        .mission { margin-bottom: 6rem; position: relative; }
+        .client-name { font-size: 0.8rem; color: var(--gold); letter-spacing: 3px; font-weight: 800; text-transform: uppercase; }
+        .mission-title { font-size: 2.2rem; margin: 1rem 0; font-weight: 300; }
+        .results-box { background: #0A0A0A; border-left: 2px solid var(--gold); padding: 2rem; margin-top: 2rem; }
+        .results-box h4 { margin: 0 0 1rem; color: var(--gold); font-size: 0.9rem; letter-spacing: 1px; }
+        .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; color: var(--dim); font-size: 0.9rem; }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="index.html" style="color:var(--dim); text-decoration:none; font-size:0.8rem;">← ACCUEIL</a>
-        <h1 style="font-size: 3.5rem; margin: 2rem 0 5rem; letter-spacing: -2px;">MISSIONS <span style="color:var(--accent)">DÉPLOYÉES</span></h1>
+        <h1 style="font-size: 3.5rem; font-weight:300; margin: 2rem 0 5rem;">IMPACT <span style="color:var(--gold)">RÉEL</span></h1>
 
-        <div class="case">
-            <h2>PMU</h2>
-            <p>Transformation agile et mise en conformité ANJ. Pilotage de la roadmap stratégique.</p>
-            <div class="results">
-                > +60pts de vélocité de livraison<br>
-                > -40% d'incidents de production
-            </div>
-        </div>
-
-        <div class="case">
-            <h2>Société Générale</h2>
-            <p>Déploiement du framework SAFe pour synchroniser 10 équipes (80+ personnes).</p>
-            <div class="results">
-                > Adoption complète en < 6 mois<br>
-                > Gouvernance CODIR opérationnelle
-            </div>
-        </div>
-
-        <div class="case">
-            <h2>Bouygues & Crédit Agricole</h2>
-            <p>Optimisation de processus métiers et acculturation des équipes à l'IA Générative.</p>
-            <div class="results">
-                > Identification de 12 quick wins IA<br>
-                > Stratégie RAG déployée via rtrvr.ai
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+        <div class="mission">
+            <span class="client-name">PMU</span>
+            <h2 class="mission-title">Transformation Agile & Conformité</h2>
+            <p style="color:var(--dim)">Pilotage de la trajectoire de transformation pour assurer la conformité ANJ tout en boostant la vélocité.</p>
+            <div class="results-box">
+                <h4>RÉSULTATS OBTENUS</h4>
+                <div class="results-grid">

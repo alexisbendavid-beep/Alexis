@@ -4,55 +4,49 @@
     <meta charset="UTF-8">
     <title>Services | Alexis Bendavid</title>
     <style>
-        :root { --bg: #050505; --accent: #3B82F6; --text: #FFFFFF; --dim: #94A3B8; --border: #1E293B; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 4rem 2rem; }
-        .container { max-width: 900px; margin: 0 auto; }
-        .service-row { display: flex; justify-content: space-between; align-items: center; padding: 3rem 0; border-bottom: 1px solid var(--border); }
-        .service-info { flex: 1; }
-        .service-info h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
-        .service-info p { color: var(--dim); }
-        .num { font-size: 3rem; font-weight: 800; color: rgba(255,255,255,0.05); margin-right: 3rem; }
+        :root { --bg: #050505; --gold: #D4AF37; --text: #FFFFFF; --dim: #888; --border: #1A1A1A; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+        .container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+        .header-gold { border-left: 3px solid var(--gold); padding-left: 1.5rem; margin-bottom: 4rem; }
+        .service-block { margin-bottom: 5rem; }
+        .service-num { color: var(--gold); font-family: serif; font-style: italic; font-size: 1.2rem; }
+        .service-title { font-size: 2rem; margin: 0.5rem 0 1.5rem; letter-spacing: -1px; }
+        .detail-list { list-style: none; padding: 0; }
+        .detail-list li { padding: 0.8rem 0; border-bottom: 1px solid #111; color: var(--dim); display: flex; align-items: center; }
+        .detail-list li::before { content: "•"; color: var(--gold); margin-right: 1rem; }
+        .pricing-tag { display: inline-block; background: rgba(212, 175, 55, 0.1); color: var(--gold); padding: 0.5rem 1rem; font-size: 0.8rem; font-weight: 700; margin-top: 1rem; }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index.html" style="color:var(--dim); text-decoration:none; font-size:0.8rem;">← ACCUEIL</a>
-        <h1 style="font-size: 3.5rem; margin: 2rem 0 4rem; letter-spacing: -2px;">NOS <span style="color:var(--accent)">CAPACITÉS</span></h1>
+        <a href="index.html" style="color:var(--dim); text-decoration:none; font-size:0.8rem;">← RETOUR</a>
+        <div class="header-gold">
+            <h1 style="font-size: 3rem; margin: 0;">NOS <span style="color:var(--gold)">CAPACITÉS</span></h1>
+            <p style="color:var(--dim)">Expertise multi-sectorielle : PMU, Société Générale, Bouygues, Crédit Agricole.</p>
+        </div>
 
-        <div class="service-row">
-            <span class="num">01</span>
-            <div class="service-info">
-                <h2>Transformation Agile & Excellence</h2>
-                <p>Audit, déploiement SAFe et optimisation de processus pour organisations complexes.</p>
-            </div>
+        <div class="service-block">
+            <span class="service-num">01.</span>
+            <h2 class="service-title">Transformation Agile & Excellence</h2>
+            <ul class="detail-list">
+                <li>Audit de maturité organisationnelle</li>
+                <li>Déploiement SAFe (Lean-Agile à l'échelle)</li>
+                <li>Optimisation des processus opérationnels</li>
+                <li>Gouvernance et pilotage de la performance</li>
+            </ul>
+            <div class="pricing-tag">MVP GRATUIT DISPONIBLE</div>
         </div>
-        <div class="service-row">
-            <span class="num">02</span>
-            <div class="service-info">
-                <h2>IA Générative & Agents</h2>
-                <p>Déploiement opérationnel d'agents Moltbolt pour l'automatisation métier.</p>
-            </div>
-        </div>
-        <div class="service-row">
-            <span class="num">03</span>
-            <div class="service-info">
-                <h2>Coaching & Leadership</h2>
-                <p>Accompagnement des dirigeants dans la définition et le suivi des OKRs.</p>
-            </div>
-        </div>
-        <div class="service-row">
-            <span class="num">04</span>
-            <div class="service-info">
-                <h2>Stratégie Digitale</h2>
-                <p>Roadmap technologique et pilotage de la croissance numérique.</p>
-            </div>
-        </div>
-        <div class="service-row">
-            <span class="num">05</span>
-            <div class="service-info">
-                <h2>Matching Experts</h2>
-                <p>Mise en relation avec les meilleurs profils IA et Agile du marché.</p>
-            </div>
+
+        <div class="service-block">
+            <span class="service-num">02.</span>
+            <h2 class="service-title">IA Générative & Agents Autonomes</h2>
+            <ul class="detail-list">
+                <li>Design d'agents proactifs via Moltbot</li>
+                <li>Mise en place de RAG (rtrvr.ai) sans hallucination</li>
+                <li>Automatisation intelligente des workflows</li>
+                <li>Accompagnement Claude Opus 4.6</li>
+            </ul>
+            <div class="pricing-tag">PHASE TEST 48H</div>
         </div>
     </div>
 </body>
