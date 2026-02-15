@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Alexis Bendavid - MVP Gratuit</title>
+    <meta name="description" content="7 domaines d'expertise : Transformation Agile, IA Générative, Coaching, Stratégie Digitale. MVP gratuit puis tarif sur-mesure.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-black: #0A0A0A;
+            --primary-white: #FAFAFA;
+            --gray-dark: #2A2A2A;
+            --gray-medium: #666666;
+            --gray-light: #E5E5E5;
+            --accent-blue: #0066CC;
+            --accent-gold: #B8986E;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-white);
+            color: var(--primary-black);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 250, 250, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-light);
+            z-index: 1000;
+            padding: 1.5rem 5%;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary-black);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--gray-medium);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-black);
+        }
+        
+        .hero-services {
+            padding: 180px 0 80px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--primary-white) 0%, #F5F5F5 100%);
+        }
+        
+        .hero-services h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-services p {
+            font-size: 1.25rem;
+            color: var(--gray-medium);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .pricing-highlight {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-black);
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: 4px;
+        }
+        
+        .service-detail {
+            padding: 100px 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+        
+        .service-detail:nth-child(even) {
+            background: #F8F8F8;
+        }
+        
+        .service-header {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .service-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 300;
+            color: var(--accent-gold);
+        }
+        
+        .service-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .service-header p {
+            color: var(--gray-medium);
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+        
+        .service-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .service-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-dark);
+        }
+        
+        .service-section ul {
+            list-style: none;
+        }
+        
+        .service-section li {
+            padding: 0.8rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--gray-dark);
+            border-bottom: 1px solid var(--gray-light);
+        }
+        
+        .service-section li:last-child {
+            border-bottom: none;
+        }
+        
+        .service-section li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+        }
+        
+        .pricing-box {
+            background: white;
+            padding: 2.5rem;
+            border: 2px solid var(--accent-blue);
+            margin-top: 3rem;
+        }
+        
+        .pricing-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .pricing-box p {
+            color: var(--gray-medium);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pricing-phases {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .phase {
+            padding: 1.5rem;
+            background: #F8F8F8;
+        }
+        
+        .phase-title {
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .phase-desc {
+            font-size: 0.95rem;
+            color: var(--gray-dark);
+        }
+        
+        .cta-service {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--accent-blue);
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .cta-service:hover {
+            background: var(--primary-black);
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--gray-light);
+            text-align: center;
+        }
+        
+        .copyright {
+            color: var(--gray-medium);
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 968px) {
+            .service-content,
+            .pricing-phases,
+            .service-header {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-services h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">ALEXIS BENDAVID</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="track-record.html">Track Record</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-services">
+            <div class="container">
+                <h1>Domaines d'Expertise</h1>
+                <p>
+                    Sept expertises complémentaires pour accompagner votre transformation de bout en bout, 
+                    avec une approche pragmatique et mesurable.
+                </p>
+                <div class="pricing-highlight">
+                    MVP Gratuit inclus • Tarification sur-mesure ensuite
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 1 -->
+        <section id="transformation" class="service-detail">
+            <div class="container">
+                <div class="service-header">
+                    <div class="service-number">01</div>
+                    <div>
+                        <h2>Transformation Agile & Release Train Engineering</h2>
+                        <p>
+                            Pilotage de programmes complexes, coordination multi-équipes, et déploiement 
+                            de frameworks agiles à l'échelle (SAFe, Scrum) pour maximiser vélocité et prédictibilité.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-content">
+                    <div class="service-section">
+                        <h3>Expertises Clés</h3>
+                        <ul>
+                            <li>Release Train Engineering (RTE) SAFe 6</li>
+                            <li>Program Increment Planning & synchronisation</li>
+                            <li>Scrum of Scrums et coordination inter-trains</li>
+                            <li>Gouvernance agile et reporting exécutif</li>
+                            <li>Coaching Scrum Masters et Product Owners</li>
+                            <li>Coordination Product-Engineering-SRE</li>
+                            <li>Gestion dépendances et risques</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-section">
+                        <h3>Résultats Mesurables</h3>
+                        <ul>
+                            <li>>95% prédictibilité delivery maintenue</li>
+                            <li>+40 à +60 points de vélocité durables</li>
+                            <li>Réduction incidents post-release (-40%)</li>
+                            <li>Time-to-market réduit de 20-30%</li>
+                            <li>Alignement stratégique business-tech</li>
+                            <li>Engagement équipes amélioré (+25pts NPS)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pricing-box">
+                    <h3>Approche & Tarification</h3>
+                    <p>
+                        Démarrage systématique par un MVP gratuit pour valider l'approche, 
+                        puis accompagnement sur-mesure selon vos besoins et contraintes.
+                    </p>
+                    <div class="pricing-phases">
+                        <div class="phase">
+                            <div class="phase-title">Phase 1 : MVP Gratuit</div>
+                            <div class="phase-desc">
+                                Diagnostic agile • Identification quick wins • Roadmap détaillée • 0€
+                            </div>
+                        </div>
+                        <div class="phase">
+                            <div class="phase-title">Phase 2 : Sur-Mesure</div>
+                            <div class="phase-desc">
+                                RTE temps partiel/complet • Coaching continu • Tarif selon engagement
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="cta-service">Demander un MVP Gratuit</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 2 -->
+        <section id="ai" class="service-detail">
+            <div class="container">
+                <div class="service-header">
+                    <div class="service-number">02</div>
+                    <div>
+                        <h2>IA Générative & Agents Autonomes</h2>
+                        <p>
+                            Intégration stratégique d'IA de pointe (Claude Opus 4.6, Moltbot, B-mad, rtrvr.ai) 
+                            pour créer de la valeur mesurable et déployer des systèmes humain-IA durables.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-content">
+                    <div class="service-section">
+                        <h3>Technologies Maîtrisées</h3>
+                        <ul>
+                            <li>Claude Opus 4.6 (modèle de pointe 2026)</li>
+                            <li>Architecture agents IA autonomes (Moltbot)</li>
+                            <li>RAG avancé et enrichissement contextuel (rtrvr.ai)</li>
+                            <li>Framework B-mad pour industrialisation</li>
+                            <li>LLMOps et déploiement production</li>
+                            <li>Prompt engineering & context engineering</li>
+                            <li>Fine-tuning et optimisation modèles</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-section">
+                        <h3>Cas d'Usage</h3>
+                        <ul>
+                            <li>Assistants IA métiers sur-mesure</li>
+                            <li>Automatisation processus intelligents</li>
+                            <li>Agents conversationnels avancés</li>
+                            <li>Analyse et génération de documents</li>
+                            <li>Support client automatisé niveau expert</li>
+                            <li>Outils d'aide à la décision stratégique</li>
+                            <li>Génération de contenu marketing/tech</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pricing-box">
+                    <h3>Approche & Tarification</h3>
+                    <p>
+                        Proof of Concept gratuit sur votre cas d'usage prioritaire, 
+                        puis développement et déploiement avec tarification transparente.
+                    </p>
+                    <div class="pricing-phases">
+                        <div class="phase">
+                            <div class="phase-title">Phase 1 : POC Gratuit</div>
+                            <div class="phase-desc">
+                                Identification use case • Prototype fonctionnel • ROI estimé • 0€
+                            </div>
+                        </div>
+                        <div class="phase">
+                            <div class="phase-title">Phase 2 : Production</div>
+                            <div class="phase-desc">
+                                Développement complet • Déploiement • Formation • Tarif sur-mesure
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="cta-service">Tester l'IA sur Mon Cas</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 3 -->
+        <section id="coaching" class="service-detail">
+            <div class="container">
+                <div class="service-header">
+                    <div class="service-number">03</div>
+                    <div>
+                        <h2>Coaching Leaders & Développement Personnel</h2>
+                        <p>
+                            Accompagnement personnalisé de cadres dirigeants et talents à haut potentiel 
+                            pour développer leadership, influence stratégique, et performance durable.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-content">
+                    <div class="service-section">
+                        <h3>Domaines d'Intervention</h3>
+                        <ul>
+                            <li>Leadership stratégique et influence</li>
+                            <li>Transitions de carrière (IC → Manager → Director)</li>
+                            <li>Personal branding et positionnement</li>
+                            <li>Gestion du stress et performance</li>
+                            <li>Communication impactante</li>
+                            <li>Négociation et gestion de conflits</li>
+                            <li>Équilibre vie professionnelle/personnelle</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-section">
+                        <h3>Méthodologie</h3>
+                        <ul>
+                            <li>Sessions individuelles 1h30 bi-mensuelles</li>
+                            <li>OKRs personnels et plans d'action</li>
+                            <li>Approche agile (sprints d'objectifs)</li>
+                            <li>Feedback 360° et auto-évaluation</li>
+                            <li>Outils concrets et exercices pratiques</li>
+                            <li>Suivi continu et accountability</li>
+                            <li>Durée : 6 à 12 mois d'engagement</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pricing-box">
+                    <h3>Approche & Tarification</h3>
+                    <p>Première session découverte gratuite, puis programmes d'accompagnement personnalisés.</p>
+                    <div class="pricing-phases">
+                        <div class="phase">
+                            <div class="phase-title">Session Découverte</div>
+                            <div class="phase-desc">
+                                1h30 • Diagnostic • Objectifs • Plan proposé • Gratuit
+                            </div>
+                        </div>
+                        <div class="phase">
+                            <div class="phase-title">Programme Sur-Mesure</div>
+                            <div class="phase-desc">
+                                6-12 mois • Bi-mensuel • Tarif selon durée et intensité
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="cta-service">Réserver Session Découverte</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 4 -->
+        <section id="excellence" class="service-detail">
+            <div class="container">
+                <div class="service-header">
+                    <div class="service-number">04</div>
+                    <div>
+                        <h2>Excellence Professionnelle & Présence Exécutive</h2>
+                        <p>
+                            Optimisation de l'impact professionnel global : image, présence digitale, 
+                            et cohérence stratégique pour renforcer crédibilité et influence.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-content">
+                    <div class="service-section">
+                        <h3>Prestations</h3>
+                        <ul>
+                            <li>Conseil en image et style exécutif</li>
+                            <li>Analyse morphologique et colorimétrie</li>
+                            <li>Création garde-robe professionnelle</li>
+                            <li>Séances photo professionnelles premium</li>
+                            <li>Optimisation profil LinkedIn</li>
+                            <li>Préparation événements et prises de parole</li>
+                            <li>Cohérence image online/offline</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-section">
+                        <h3>Pour Qui</h3>
+                        <ul>
+                            <li>C-level et VP cherchant à renforcer présence</li>
+                            <li>Entrepreneurs à forte visibilité</li>
+                            <li>Consultants et coachs en personal branding</li>
+                            <li>Managers en transition vers direction</li>
+                            <li>Speakers et conférenciers</li>
+                            <li>Professionnels en recherche active</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pricing-box">
+                    <h3>Approche & Tarification</h3>
+                    <p>Audit image initial gratuit, puis accompagnement modulaire selon besoins.</p>
+                    <div class="pricing-phases">
+                        <div class="phase">
+                            <div class="phase-title">Audit Gratuit</div>
+                            <div class="phase-desc">
+                                Diagnostic image • Recommandations • Plan d'action • 0€
+                            </div>
+                        </div>
+                        <div class="phase">
+                            <div class="phase-title">Accompagnement</div>
+                            <div class="phase-desc">
+                                Modules à la carte • Forfaits ou sessions • Tarif selon prestations
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="cta-service">Demander un Audit Image</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 5 -->
+        <section id="digital" class="service-detail">
+            <div class="container">
+                <div class="service-header">
+                    <div class="service-number">05</div>
+                    <div>
+                        <h2>Stratégie Digitale & Croissance</h2>
+                        <p>
+                            Conseil en marketing digital, acquisition clients, et développement 
+                            de présence en ligne pour accélérer votre croissance business.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-content">
+                    <div class="service-section">
+                        <h3>Expertises</h3>
+                        <ul>
+                            <li>Stratégie marketing digital globale</li>
+                            <li>Optimisation LinkedIn et réseaux sociaux</li>
+                            <li>Content strategy et thought leadership</li>
+                            <li>SEO stratégique et référencement</li>
+                            <li>Growth hacking et acquisition scalable</li>
+                            <li>Email marketing et automation</li>
+                            <li>Publicités ciblées (LinkedIn, Meta, Google)</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-section">
+                        <h3>Livrables</h3>
+                        <ul>
+                            <li>Audit et stratégie digitale complète</li>
+                            <li>Plan de contenu 3-6-12 mois</li>
+                            <li>Roadmap acquisition multi-canal</li>
+                            <li>Setup outils et process</li>
+                            <li>Formation équipes internes</li>
+                            <li>Dashboards de suivi ROI</li>
+                            <li>Optimisation continue basée data</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pricing-box">
+                    <h3>Approche & Tarification</h3>
+                    <p>Audit stratégique gratuit, puis accompagnement selon objectifs de croissance.</p>
+                    <div class="pricing-phases">
+                        <div class="phase">
+                            <div class="phase-title">Audit Stratégique</div>
+                            <div class="phase-desc">
+                                Diagnostic digital • Quick wins • Roadmap • Gratuit
+                            </div>
+                        </div>
+                        <div class="phase">
+                            <div class="phase-title">Déploiement</div>
+                            <div class="phase-desc">
+                                Exécution stratégie • Formation • Suivi ROI • Tarif selon scope
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="cta-service">Demander un Audit Digital</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 6 -->
+        <section id="solutions" class="service-detail">
+            <div class="container">
+                <div class="service-header">
+                    <div class="service-number">06</div>
+                    <div>
+                        <h2>Solutions Web & Applications Sur-Mesure</h2>
+                        <p>
+                            Conception et développement de sites web premium, applications métiers, 
+                            et outils digitaux alignés avec vos objectifs stratégiques.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-content">
+                    <div class="service-section">
+                        <h3>Ce Que Nous Créons</h3>
+                        <ul>
+                            <li>Sites corporate premium (vitrine, institutional)</li>
+                            <li>Plateformes métier sur-mesure</li>
+                            <li>Applications web et mobile</li>
+                            <li>Landing pages haute conversion</li>
+                            <li>E-commerce et marketplaces</li>
+                            <li>Outils internes et dashboards</li>
+                            <li>Refonte et modernisation sites existants</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-section">
+                        <h3>Technologies</h3>
+                        <ul>
+                            <li>Architecture moderne et scalable</li>
+                            <li>Performance optimale (< 2s chargement)</li>
+                            <li>Design premium responsive</li>
+                            <li>SEO intégré et analytics</li>
+                            <li>Sécurité et conformité RGPD</li>
+                            <li>Maintenance et évolutions</li>
+                            <li>Formation utilisateurs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pricing-box">
+                    <h3>Approche & Tarification</h3>
+                    <p>Cadrage projet gratuit avec maquettes initiales, puis devis détaillé transparent.</p>
+                    <div class="pricing-phases">
+                        <div class="phase">
+                            <div class="phase-title">Cadrage Gratuit</div>
+                            <div class="phase-desc">
+                                Besoins • Wireframes • Specs • Devis • 0€
+                            </div>
+                        </div>
+                        <div class="phase">
+                            <div class="phase-title">Réalisation</div>
+                            <div class="phase-desc">
+                                Design • Développement • Tests • Déploiement • Tarif forfaitaire
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="cta-service">Demander un Cadrage Projet</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 7 -->
+        <section id="network" class="service-detail">
+            <div class="container">
+                <div class="service-header">
+                    <div class="service-number">07</div>
+                    <div>
+                        <h2>Réseau d'Experts Certifiés</h2>
+                        <p>
+                            Accès à un écosystème exclusif de professionnels certifiés pour compléter 
+                            vos besoins projets : IA, dev, design, marketing, business.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-content">
+                    <div class="service-section">
+                        <h3>Domaines Couverts</h3>
+                        <ul>
+                            <li>Experts IA et Data Science</li>
+                            <li>Développeurs (web, mobile, cloud)</li>
+                            <li>Designers UX/UI et Product</li>
+                            <li>Marketeurs et Growth Hackers</li>
+                            <li>Coaches Agile et RTEs</li>
+                            <li>Consultants business (finance, RH, juridique)</li>
+                            <li>Spécialistes cybersécurité et compliance</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-section">
+                        <h3>Processus</h3>
+                        <ul>
+                            <li>Cadrage précis de vos besoins</li>
+                            <li>Sélection de 3-5 profils qualifiés</li>
+                            <li>Présentation détaillée + références</li>
+                            <li>Facilitation mise en relation</li>
+                            <li>Accompagnement intégration</li>
+                            <li>Suivi satisfaction continue</li>
+                            <li>Garantie qualité de la collaboration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pricing-box">
+                    <h3>Approche & Tarification</h3>
+                    <p>Matching initial gratuit, commission uniquement si collaboration réussie.</p>
+                    <div class="pricing-phases">
+                        <div class="phase">
+                            <div class="phase-title">Matching Gratuit</div>
+                            <div class="phase-desc">
+                                Cadrage • Shortlist profils • Présentation • 0€
+                            </div>
+                        </div>
+                        <div class="phase">
+                            <div class="phase-title">Commission Success-Fee</div>
+                            <div class="phase-desc">
+                                Uniquement si collaboration confirmée • % transparent du contrat
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="cta-service">Trouver un Expert</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                © 2026 Alexis Bendavid • Strategic Transformation & AI Advisory • Place Vendôme, Paris
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
