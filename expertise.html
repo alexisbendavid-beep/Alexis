@@ -2,45 +2,42 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Expertise | Agentic Stack</title>
+    <title>Expertise | Alexis Bendavid</title>
     <style>
-        /* Héritage du style de l'index */
-        :root { --bg: #050505; --card-bg: #0A0A0A; --accent: #3B82F6; --text: #F9FAFB; --text-dim: #9CA3AF; --border: #1F2937; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 2rem; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 4rem; }
-        .tech-card { background: var(--card-bg); border: 1px solid var(--border); padding: 3rem; border-radius: 20px; }
-        .tech-card h2 { color: var(--accent); margin-bottom: 1rem; font-size: 1.8rem; letter-spacing: -1px; }
-        .tag { display: inline-block; background: rgba(59, 130, 246, 0.1); color: var(--accent); padding: 0.3rem 0.8rem; border-radius: 5px; font-size: 0.7rem; font-weight: 700; margin-bottom: 1rem; }
-        .nav-mini { margin-bottom: 4rem; text-align: center; }
-        .nav-mini a { color: var(--text-dim); text-decoration: none; margin: 0 1rem; font-size: 0.8rem; }
+        :root { --bg: #050505; --card: #0D0D0D; --accent: #3B82F6; --text: #FFFFFF; --dim: #94A3B8; --border: #1E293B; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 4rem 2rem; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 4rem; }
+        .tech-box { border: 1px solid var(--border); padding: 2.5rem; border-radius: 20px; background: var(--card); }
+        .tech-box h2 { color: var(--accent); margin-bottom: 1rem; font-size: 1.5rem; }
+        .tag { display: inline-block; background: rgba(59, 130, 246, 0.1); color: var(--accent); padding: 4px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; margin-bottom: 1rem; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="nav-mini"><a href="index.html">← RETOUR ACCUEIL</a></div>
-        <h1 style="font-size: 3rem; text-align: center; letter-spacing: -2px;">AGENTIC <span style="color:var(--accent)">STACK</span></h1>
+        <a href="index.html" style="color:var(--dim); text-decoration:none; font-size:0.8rem;">← RETOUR</a>
+        <h1 style="font-size: 3.5rem; margin-top: 2rem; letter-spacing: -2px;">TECH <span style="color:var(--accent)">STACK</span> & CERTIFICATIONS</h1>
         
-        <div class="stack-grid">
-            <div class="tech-card">
-                <div class="tag">EXECUTION LAYER</div>
-                <h2>Moltbot Orchestrator</h2>
-                <p style="color: var(--text-dim)">Gestion des agents autonomes, planification de tâches multi-étapes et intégration d'outils tiers via B-mad.</p>
+        <div class="grid">
+            <div class="tech-box">
+                <div class="tag">LLM OPS</div>
+                <h2>Claude & Moltbolt</h2>
+                <p style="color:var(--dim)">Orchestration d'agents autonomes et utilisation des modèles SOTA pour la prise de décision stratégique.</p>
             </div>
-            <div class="tech-card">
-                <div class="tag">KNOWLEDGE LAYER</div>
-                <h2>rtrvr.ai (RAG)</h2>
-                <p style="color: var(--text-dim)">Indexation vectorielle de votre patrimoine documentaire pour une IA qui ne hallucine jamais sur vos données.</p>
+            <div class="tech-box">
+                <div class="tag">KNOWLEDGE</div>
+                <h2>rtrvr.ai & RAG</h2>
+                <p style="color:var(--dim)">Mise en place de bases de connaissances vectorielles dynamiques pour supprimer les hallucinations de l'IA.</p>
             </div>
-            <div class="tech-card">
-                <div class="tag">MODEL LAYER</div>
-                <h2>Claude 3.5 Sonnet</h2>
-                <p style="color: var(--text-dim)">Exploitation des capacités de raisonnement les plus avancées du marché pour la prise de décision stratégique.</p>
+            <div class="tech-box">
+                <div class="tag">AGILE SCALE</div>
+                <h2>SAFe SPC & Agilist</h2>
+                <p style="color:var(--dim)">Accompagnement de plus de 1500 collaborateurs sur des transformations agiles complexes (Bancaire, Retail).</p>
             </div>
-            <div class="tech-card">
-                <div class="tag">AGILE LAYER</div>
-                <h2>SAFe & Lean</h2>
-                <p style="color: var(--text-dim)">15+ ans d'expérience dans le passage à l'échelle des organisations pour supporter la vélocité de l'IA.</p>
+            <div class="tech-box">
+                <div class="tag">FRAMEWORK</div>
+                <h2>B-mad Industrialisation</h2>
+                <p style="color:var(--dim)">Méthodologie propriétaire pour passer du prototype au déploiement en production en un temps record.</p>
             </div>
         </div>
     </div>

@@ -2,41 +2,57 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Services | Capabilities</title>
+    <title>Services | Alexis Bendavid</title>
     <style>
-        :root { --bg: #050505; --card-bg: #0A0A0A; --accent: #3B82F6; --text: #F9FAFB; --text-dim: #9CA3AF; --border: #1F2937; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 2rem; }
-        .container { max-width: 1000px; margin: 0 auto; }
-        .service-row { display: flex; justify-content: space-between; padding: 2.5rem 0; border-bottom: 1px solid var(--border); align-items: center; }
-        .service-name { font-size: 1.5rem; font-weight: 600; flex: 1; }
-        .service-desc { flex: 2; color: var(--text-dim); padding-right: 2rem; }
-        .service-num { font-family: serif; font-style: italic; color: var(--accent); margin-right: 2rem; }
+        :root { --bg: #050505; --accent: #3B82F6; --text: #FFFFFF; --dim: #94A3B8; --border: #1E293B; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 4rem 2rem; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .service-row { display: flex; justify-content: space-between; align-items: center; padding: 3rem 0; border-bottom: 1px solid var(--border); }
+        .service-info { flex: 1; }
+        .service-info h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .service-info p { color: var(--dim); }
+        .num { font-size: 3rem; font-weight: 800; color: rgba(255,255,255,0.05); margin-right: 3rem; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div style="margin-bottom: 4rem;"><a href="index.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.8rem;">← ACCUEIL</a></div>
-        <h1 style="font-size: 3rem; margin-bottom: 4rem; letter-spacing: -2px;">NOS <span style="color:var(--accent)">CAPACITÉS</span></h1>
-        
+        <a href="index.html" style="color:var(--dim); text-decoration:none; font-size:0.8rem;">← ACCUEIL</a>
+        <h1 style="font-size: 3.5rem; margin: 2rem 0 4rem; letter-spacing: -2px;">NOS <span style="color:var(--accent)">CAPACITÉS</span></h1>
+
         <div class="service-row">
-            <span class="service-num">01</span>
-            <div class="service-name">Agentic Blueprint</div>
-            <div class="service-desc">Audit de vos processus et design de votre future armée d'agents Moltbot.</div>
+            <span class="num">01</span>
+            <div class="service-info">
+                <h2>Transformation Agile & Excellence</h2>
+                <p>Audit, déploiement SAFe et optimisation de processus pour organisations complexes.</p>
+            </div>
         </div>
         <div class="service-row">
-            <span class="service-num">02</span>
-            <div class="service-name">MVP Deployment</div>
-            <div class="service-desc">Mise en production d'un premier agent opérationnel sur votre stack en moins de 48h.</div>
+            <span class="num">02</span>
+            <div class="service-info">
+                <h2>IA Générative & Agents</h2>
+                <p>Déploiement opérationnel d'agents Moltbolt pour l'automatisation métier.</p>
+            </div>
         </div>
         <div class="service-row">
-            <span class="service-num">03</span>
-            <div class="service-name">RAG Knowledge Base</div>
-            <div class="service-desc">Structuration de vos données non structurées avec rtrvr.ai pour alimenter vos IA.</div>
+            <span class="num">03</span>
+            <div class="service-info">
+                <h2>Coaching & Leadership</h2>
+                <p>Accompagnement des dirigeants dans la définition et le suivi des OKRs.</p>
+            </div>
         </div>
         <div class="service-row">
-            <span class="service-num">04</span>
-            <div class="service-name">Scale Up Strategy</div>
-            <div class="service-desc">Accompagnement au changement pour vos équipes humaines face à l'arrivée des agents.</div>
+            <span class="num">04</span>
+            <div class="service-info">
+                <h2>Stratégie Digitale</h2>
+                <p>Roadmap technologique et pilotage de la croissance numérique.</p>
+            </div>
+        </div>
+        <div class="service-row">
+            <span class="num">05</span>
+            <div class="service-info">
+                <h2>Matching Experts</h2>
+                <p>Mise en relation avec les meilleurs profils IA et Agile du marché.</p>
+            </div>
         </div>
     </div>
 </body>
