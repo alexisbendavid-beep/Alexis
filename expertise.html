@@ -2,42 +2,40 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Expertise & Certifications | Alexis Bendavid</title>
+    <title>Expertise | Alexis Bendavid</title>
     <style>
         :root { --bg: #050505; --gold: #D4AF37; --text: #FFFFFF; --dim: #888; --border: #1A1A1A; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
         .container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
-        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
-        .tech-card { background: #0A0A0A; border: 1px solid var(--border); padding: 2.5rem; border-top: 3px solid var(--gold); }
-        .tech-card h3 { color: var(--gold); margin-top: 0; font-size: 1.3rem; letter-spacing: 1px; }
-        .cert-list { list-style: none; padding: 0; margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 2rem; }
-        .cert-item { display: flex; justify-content: space-between; padding: 0.5rem 0; color: var(--dim); font-size: 0.9rem; }
-        .cert-item span { color: var(--gold); font-weight: bold; }
+        .nav-back { color: var(--dim); text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; }
+        .tech-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; }
+        .tech-card { background: #0A0A0A; border: 1px solid var(--border); padding: 2.5rem; }
+        .tech-card h3 { color: var(--gold); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 1rem; text-transform: uppercase; }
+        .tech-card p { color: var(--dim); font-size: 0.95rem; line-height: 1.6; }
+        .cert-table { width: 100%; border-collapse: collapse; margin-top: 4rem; }
+        .cert-table td { padding: 1.2rem 0; border-bottom: 1px solid #111; color: var(--dim); }
+        .cert-table .gold-text { color: var(--gold); font-weight: bold; width: 200px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index.html" style="color:var(--dim); text-decoration:none; font-size:0.8rem; letter-spacing:1px;">← RETOUR</a>
-        <h1 style="font-size: 3rem; font-weight: 300; margin: 2rem 0;">TECH <span style="color:var(--gold)">STACK</span></h1>
-        
-        <div class="grid">
-            <div class="tech-card">
-                <h3>IA & AGENTS</h3>
-                <p style="color:var(--dim)">Déploiement opérationnel de Claude Opus 4.6 et Moltbolt. Architecture RAG avec rtrvr.ai pour une fiabilité absolue des données.</p>
-            </div>
-            <div class="tech-card">
-                <h3>AGILITÉ À L'ÉCHELLE</h3>
-                <p style="color:var(--dim)">Expertise SAFe (SPC) pour synchroniser les directions métiers et IT. Optimisation de la vélocité et du Time-to-Market.</p>
-            </div>
+        <a href="index.html" class="nav-back">← RETOUR ACCUEIL</a>
+        <h1 style="font-size: 3.5rem; font-weight: 300; margin: 2rem 0; letter-spacing: -2px;">TECH <span style="color:var(--gold)">STACK</span></h1>
+
+        <div class="tech-grid">
+            <div class="tech-card"><h3>Claude Opus 4.6</h3><p>Maîtrise des LLMs SOTA pour les raisonnements stratégiques et l'analyse de données non structurées.</p></div>
+            <div class="tech-card"><h3>Moltbot Agents</h3><p>Conception et orchestration d'agents autonomes pour l'automatisation proactive des métiers.</p></div>
+            <div class="tech-card"><h3>RAG & Knowledge</h3><p>Architecture rtrvr.ai pour l'exploitation sécurisée des bases de connaissances internes sans hallucination.</p></div>
+            <div class="tech-card"><h3>SAFe SPC 6.0</h3><p>Expertise certifiée pour le pilotage de trains agiles et la synchronisation de plus de 100 collaborateurs.</p></div>
         </div>
 
-        <h2 style="margin-top:5rem; font-weight:300; border-bottom:1px solid var(--gold); display:inline-block; padding-bottom:10px;">CERTIFICATIONS CLÉS</h2>
-        <div class="cert-list">
-            <div class="cert-item">SAFe® 6 Practice Consultant (SPC) <span>VÉRIFIÉ</span></div>
-            <div class="cert-item">Agile Product Management (APM) <span>VÉRIFIÉ</span></div>
-            <div class="cert-item">DeepLearning.ai IA for Everyone <span>VÉRIFIÉ</span></div>
-            <div class="cert-item">Lean Six Sigma Green Belt <span>VÉRIFIÉ</span></div>
-        </div>
+        <h2 style="margin-top: 5rem; font-weight: 300; color: var(--gold); letter-spacing: 1px;">CERTIFICATIONS & FORMATIONS</h2>
+        <table class="cert-table">
+            <tr><td class="gold-text">SAFe Practice Consultant</td><td>Certification SPC 6.0 - Scaled Agile Inc.</td></tr>
+            <tr><td class="gold-text">Agile Product Management</td><td>Expertise certifiée APM</td></tr>
+            <tr><td class="gold-text">DeepLearning.ai</td><td>Spécialisation Intelligence Artificielle & LLM Ops</td></tr>
+            <tr><td class="gold-text">Lean Six Sigma</td><td>Optimisation des flux et excellence opérationnelle</td></tr>
+        </table>
     </div>
 </body>
 </html>

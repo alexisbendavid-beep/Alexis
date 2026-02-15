@@ -7,23 +7,50 @@
         :root { --bg: #050505; --gold: #D4AF37; --text: #FFFFFF; --dim: #888; --border: #1A1A1A; }
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
         .container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
-        .mission { margin-bottom: 6rem; position: relative; }
+        .mission { margin-bottom: 6rem; }
         .client-name { font-size: 0.8rem; color: var(--gold); letter-spacing: 3px; font-weight: 800; text-transform: uppercase; }
-        .mission-title { font-size: 2.2rem; margin: 1rem 0; font-weight: 300; }
-        .results-box { background: #0A0A0A; border-left: 2px solid var(--gold); padding: 2rem; margin-top: 2rem; }
-        .results-box h4 { margin: 0 0 1rem; color: var(--gold); font-size: 0.9rem; letter-spacing: 1px; }
-        .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; color: var(--dim); font-size: 0.9rem; }
+        .mission-title { font-size: 2.2rem; margin: 1rem 0; font-weight: 300; letter-spacing: -1px; }
+        .results-box { background: #0A0A0A; border-left: 2px solid var(--gold); padding: 2rem; margin-top: 1.5rem; }
+        .results-box h4 { margin: 0 0 1rem; color: var(--gold); font-size: 0.8rem; letter-spacing: 1px; }
+        .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; color: var(--dim); font-size: 0.95rem; }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="index.html" style="color:var(--dim); text-decoration:none; font-size:0.8rem;">← ACCUEIL</a>
-        <h1 style="font-size: 3.5rem; font-weight:300; margin: 2rem 0 5rem;">IMPACT <span style="color:var(--gold)">RÉEL</span></h1>
+        <h1 style="font-size: 3.5rem; font-weight:300; margin: 2rem 0 5rem; letter-spacing: -2px;">IMPACT <span style="color:var(--gold)">RÉEL</span></h1>
 
         <div class="mission">
             <span class="client-name">PMU</span>
-            <h2 class="mission-title">Transformation Agile & Conformité</h2>
-            <p style="color:var(--dim)">Pilotage de la trajectoire de transformation pour assurer la conformité ANJ tout en boostant la vélocité.</p>
+            <h2 class="mission-title">Transformation & Conformité ANJ</h2>
+            <p style="color:var(--dim)">Pilotage de la trajectoire agile et mise en conformité réglementaire.</p>
             <div class="results-box">
-                <h4>RÉSULTATS OBTENUS</h4>
+                <h4>RÉSULTATS</h4>
                 <div class="results-grid">
+                    <div>• +60 pts de vélocité</div>
+                    <div>• -40% d'incidents prod</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mission">
+            <span class="client-name">SOCIÉTÉ GÉNÉRALE</span>
+            <h2 class="mission-title">Déploiement SAFe à l'échelle</h2>
+            <p style="color:var(--dim)">Synchronisation de 10 équipes et mise en place de la gouvernance CODIR.</p>
+            <div class="results-box">
+                <h4>RÉSULTATS</h4>
+                <div class="results-grid">
+                    <div>• TTM réduit de 25%</div>
+                    <div>• Adoption complète < 6 mois</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mission">
+            <span class="client-name">BOUYGUES / CRÉDIT AGRICOLE</span>
+            <h2 class="mission-title">Expertise IA & Stratégie RAG</h2>
+            <p style="color:var(--dim)">Audit et identification de quick wins IA via rtrvr.ai.</p>
+        </div>
+    </div>
+</body>
+</html>

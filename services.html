@@ -7,34 +7,28 @@
         :root { --bg: #050505; --gold: #D4AF37; --text: #FFFFFF; --dim: #888; --border: #1A1A1A; }
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
         .container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
-        .header-gold { border-left: 3px solid var(--gold); padding-left: 1.5rem; margin-bottom: 4rem; }
-        .service-block { margin-bottom: 5rem; }
+        .service-block { margin-bottom: 5rem; border-bottom: 1px solid #111; padding-bottom: 3rem; }
         .service-num { color: var(--gold); font-family: serif; font-style: italic; font-size: 1.2rem; }
-        .service-title { font-size: 2rem; margin: 0.5rem 0 1.5rem; letter-spacing: -1px; }
+        .service-title { font-size: 2.2rem; margin: 0.5rem 0 1.5rem; letter-spacing: -1px; font-weight: 300; }
         .detail-list { list-style: none; padding: 0; }
-        .detail-list li { padding: 0.8rem 0; border-bottom: 1px solid #111; color: var(--dim); display: flex; align-items: center; }
-        .detail-list li::before { content: "•"; color: var(--gold); margin-right: 1rem; }
-        .pricing-tag { display: inline-block; background: rgba(212, 175, 55, 0.1); color: var(--gold); padding: 0.5rem 1rem; font-size: 0.8rem; font-weight: 700; margin-top: 1rem; }
+        .detail-list li { padding: 0.6rem 0; color: var(--dim); display: flex; align-items: center; font-size: 1rem; }
+        .detail-list li::before { content: "→"; color: var(--gold); margin-right: 1rem; font-weight: bold; }
+        .badge { display: inline-block; border: 1px solid var(--gold); color: var(--gold); padding: 4px 12px; font-size: 0.7rem; margin-top: 1.5rem; letter-spacing: 1px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index.html" style="color:var(--dim); text-decoration:none; font-size:0.8rem;">← RETOUR</a>
-        <div class="header-gold">
-            <h1 style="font-size: 3rem; margin: 0;">NOS <span style="color:var(--gold)">CAPACITÉS</span></h1>
-            <p style="color:var(--dim)">Expertise multi-sectorielle : PMU, Société Générale, Bouygues, Crédit Agricole.</p>
-        </div>
+        <a href="index.html" style="color:var(--dim); text-decoration:none; font-size:0.8rem;">← ACCUEIL</a>
+        <h1 style="font-size: 3.5rem; margin: 2rem 0 4rem; font-weight: 300; letter-spacing: -2px;">NOS <span style="color:var(--gold)">CAPACITÉS</span></h1>
 
         <div class="service-block">
             <span class="service-num">01.</span>
             <h2 class="service-title">Transformation Agile & Excellence</h2>
             <ul class="detail-list">
-                <li>Audit de maturité organisationnelle</li>
-                <li>Déploiement SAFe (Lean-Agile à l'échelle)</li>
-                <li>Optimisation des processus opérationnels</li>
-                <li>Gouvernance et pilotage de la performance</li>
+                <li>Audit de maturité organisationnelle et diagnostic Lean</li>
+                <li>Déploiement du framework SAFe (SPC Certifié)</li>
+                <li>Optimisation de la chaîne de valeur (VSC)</li>
             </ul>
-            <div class="pricing-tag">MVP GRATUIT DISPONIBLE</div>
         </div>
 
         <div class="service-block">
@@ -42,11 +36,53 @@
             <h2 class="service-title">IA Générative & Agents Autonomes</h2>
             <ul class="detail-list">
                 <li>Design d'agents proactifs via Moltbot</li>
-                <li>Mise en place de RAG (rtrvr.ai) sans hallucination</li>
-                <li>Automatisation intelligente des workflows</li>
-                <li>Accompagnement Claude Opus 4.6</li>
+                <li>Architecture RAG sécurisée avec rtrvr.ai</li>
+                <li>Automatisation des processus décisionnels complexes</li>
             </ul>
-            <div class="pricing-tag">PHASE TEST 48H</div>
+        </div>
+
+        <div class="service-block">
+            <span class="service-num">03.</span>
+            <h2 class="service-title">Coaching & Leadership</h2>
+            <ul class="detail-list">
+                <li>Alignement stratégique via les OKRs</li>
+                <li>Coaching de dirigeants en période de transformation</li>
+            </ul>
+        </div>
+
+        <div class="service-block">
+            <span class="service-num">04.</span>
+            <h2 class="service-title">Stratégie Digitale</h2>
+            <ul class="detail-list">
+                <li>Roadmaps technologiques et audit de dette technique</li>
+                <li>Gouvernance de la donnée et conformité</li>
+            </ul>
+        </div>
+
+        <div class="service-block">
+            <span class="service-num">05.</span>
+            <h2 class="service-title">Industrialisation B-mad</h2>
+            <ul class="detail-list">
+                <li>Méthodologie propriétaire pour passage à l'échelle</li>
+                <li>Monitoring et itération continue des solutions IA</li>
+            </ul>
+        </div>
+
+        <div class="service-block">
+            <span class="service-num">06.</span>
+            <h2 class="service-title">Matching Experts High-Level</h2>
+            <ul class="detail-list">
+                <li>Réseau d'indépendants certifiés SAFe/IA</li>
+            </ul>
+        </div>
+
+        <div class="service-block">
+            <span class="service-num">07.</span>
+            <h2 class="service-title">Advisory Place Vendôme</h2>
+            <ul class="detail-list">
+                <li>Conseil premium sur-mesure pour VIP & Dirigeants</li>
+            </ul>
+            <div class="badge">MVP GRATUIT OFFERT</div>
         </div>
     </div>
 </body>
