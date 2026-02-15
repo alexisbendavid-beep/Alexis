@@ -3,696 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexis Bendavid | Strategic Transformation & AI Advisory</title>
-    <meta name="description" content="Cabinet conseil en transformation organisationnelle, IA générative (Claude Opus 4.6, Moltbolt), et excellence opérationnelle. MVP gratuit puis accompagnement sur-mesure.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <title>Alexis Bendavid | Agentic Transformation</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary-black: #0A0A0A;
-            --primary-white: #FAFAFA;
-            --gray-dark: #2A2A2A;
-            --gray-medium: #666666;
-            --gray-light: #E5E5E5;
-            --accent-blue: #0066CC;
-            --accent-gold: #B8986E;
-            --spacing-section: 140px;
-            --spacing-large: 60px;
-            --spacing-medium: 40px;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--primary-white);
-            color: var(--primary-black);
-            font-size: 18px;
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 5%;
-        }
-        
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(250, 250, 250, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--gray-light);
-            z-index: 1000;
-            padding: 1.5rem 5%;
-        }
-        
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            color: var(--primary-black);
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 3rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: var(--gray-medium);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 400;
-            letter-spacing: 0.3px;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--accent-blue);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary-black);
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 200px 0 var(--spacing-section);
-            background: linear-gradient(to bottom, var(--primary-white) 0%, #F5F5F5 100%);
-        }
-        
-        .hero-content {
-            max-width: 900px;
-        }
-        
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            font-weight: 400;
-            line-height: 1.15;
-            margin-bottom: 2rem;
-            letter-spacing: -1px;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.3rem;
-            color: var(--gray-dark);
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
-            font-weight: 300;
-        }
-        
-        .hero-description {
-            font-size: 1.1rem;
-            color: var(--gray-medium);
-            line-height: 1.8;
-            margin-bottom: 3rem;
-            max-width: 800px;
-        }
-        
-        .tech-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-        
-        .tech-badge {
-            padding: 0.6rem 1.2rem;
-            border: 1px solid var(--gray-light);
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--gray-dark);
-            letter-spacing: 0.3px;
-        }
-        
-        .tech-badge.featured {
-            background: var(--primary-black);
-            color: var(--primary-white);
-            border-color: var(--primary-black);
-        }
-        
-        .cta-primary {
-            display: inline-block;
-            padding: 1.1rem 2.5rem;
-            background: transparent;
-            border: 2px solid var(--accent-blue);
-            color: var(--accent-blue);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-        }
-        
-        .cta-primary:hover {
-            background: var(--accent-blue);
-            color: white;
-            transform: translateY(-2px);
-        }
-        
-        /* Metrics Section */
-        .metrics {
-            padding: var(--spacing-section) 0;
-            border-top: 1px solid var(--gray-light);
-        }
-        
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 4rem;
-        }
-        
-        .metric-item {
-            text-align: center;
-        }
-        
-        .metric-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            font-weight: 400;
-            color: var(--primary-black);
-            margin-bottom: 0.5rem;
-        }
-        
-        .metric-label {
-            font-size: 0.9rem;
-            color: var(--gray-medium);
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-        
-        /* Approach Section */
-        .approach {
-            padding: var(--spacing-section) 0;
-            background: var(--primary-white);
-        }
-        
-        .section-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto var(--spacing-large);
-        }
-        
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.5px;
-        }
-        
-        .section-subtitle {
-            font-size: 1.15rem;
-            color: var(--gray-medium);
-            line-height: 1.7;
-        }
-        
-        .approach-cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
-            margin-top: var(--spacing-large);
-        }
-        
-        .approach-card {
-            padding: 3rem;
-            border: 1px solid var(--gray-light);
-            background: white;
-            transition: all 0.4s ease;
-        }
-        
-        .approach-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
-        }
-        
-        .approach-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            color: var(--accent-gold);
-            margin-bottom: 1.5rem;
-        }
-        
-        .approach-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-        
-        .approach-card p {
-            color: var(--gray-medium);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-        
-        .approach-card ul {
-            list-style: none;
-        }
-        
-        .approach-card li {
-            padding-left: 1.5rem;
-            position: relative;
-            margin-bottom: 0.8rem;
-            color: var(--gray-dark);
-            font-size: 0.95rem;
-        }
-        
-        .approach-card li::before {
-            content: '—';
-            position: absolute;
-            left: 0;
-            color: var(--accent-blue);
-        }
-        
-        /* Services Preview */
-        .services-preview {
-            padding: var(--spacing-section) 0;
-            background: #F8F8F8;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: var(--spacing-large);
-        }
-        
-        .service-card {
-            background: white;
-            padding: 3rem 2rem;
-            border: 1px solid var(--gray-light);
-            transition: all 0.3s ease;
-        }
-        
-        .service-card:hover {
-            border-color: var(--accent-blue);
-            transform: translateY(-3px);
-        }
-        
-        .service-number {
-            font-size: 0.85rem;
-            color: var(--gray-medium);
-            letter-spacing: 1px;
-            margin-bottom: 1.5rem;
-        }
-        
-        .service-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
-        
-        .service-card p {
-            color: var(--gray-medium);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-        
-        .service-link {
-            color: var(--accent-blue);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: color 0.3s ease;
-        }
-        
-        .service-link:hover {
-            color: var(--primary-black);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            padding: var(--spacing-section) 0;
-            text-align: center;
-            background: var(--primary-black);
-            color: var(--primary-white);
-        }
-        
-        .cta-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-        }
-        
-        .cta-section p {
-            font-size: 1.2rem;
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 3rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .cta-white {
-            display: inline-block;
-            padding: 1.1rem 2.5rem;
-            background: white;
-            color: var(--primary-black);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-        }
-        
-        .cta-white:hover {
-            background: var(--accent-blue);
-            color: white;
-            transform: translateY(-2px);
-        }
-        
-        /* Footer */
-        footer {
-            padding: var(--spacing-large) 0;
-            border-top: 1px solid var(--gray-light);
-            text-align: center;
-        }
-        
-        .footer-content {
-            margin-bottom: 2rem;
-        }
-        
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-address {
-            color: var(--gray-medium);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-links a {
-            color: var(--gray-medium);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--primary-black);
-        }
-        
-        .copyright {
-            color: var(--gray-medium);
-            font-size: 0.85rem;
-        }
-        
-        /* Responsive */
-        @media (max-width: 968px) {
-            .hero h1 {
-                font-size: 3rem;
-            }
-            
-            .metrics-grid,
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .approach-cards {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-        }
+        :root { --bg: #050505; --card-bg: #0A0A0A; --accent: #3B82F6; --text: #F9FAFB; --text-dim: #9CA3AF; --border: #1F2937; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        nav { padding: 2rem 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
+        .logo { font-weight: 800; letter-spacing: -1px; font-size: 1.2rem; text-transform: uppercase; }
+        .nav-links a { color: var(--text-dim); text-decoration: none; margin-left: 2rem; font-size: 0.85rem; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .hero { padding: 8rem 0; display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
+        .hero h1 { font-size: 4.5rem; line-height: 0.95; letter-spacing: -3px; margin-bottom: 2rem; }
+        .hero h1 span { color: var(--accent); }
+        .terminal { background: #000; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; font-family: 'Monaco', monospace; font-size: 0.85rem; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .term-header { display: flex; gap: 6px; margin-bottom: 1rem; }
+        .dot { width: 8px; height: 8px; border-radius: 50%; }
+        .line { margin-bottom: 0.4rem; color: #4ade80; }
+        .bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding-bottom: 8rem; }
+        .bento-card { background: var(--card-bg); border: 1px solid var(--border); padding: 2.5rem; border-radius: 24px; transition: 0.3s; }
+        .bento-card:hover { border-color: var(--accent); }
+        .large { grid-column: span 2; }
+        .cta-btn { background: var(--accent); color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-block; transition: 0.3s; }
+        .cta-btn:hover { transform: scale(1.05); filter: brightness(1.2); }
+        footer { padding: 4rem 0; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 0.8rem; text-align: center; }
     </style>
 </head>
 <body>
-    <header>
+    <div class="container">
         <nav>
-            <div class="logo">ALEXIS BENDAVID</div>
-            <ul class="nav-links">
-                <li><a href="expertise.html">Expertise</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="track-record.html">Track Record</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <div class="logo">ALEXIS_BENDAVID // AGENTIC</div>
+            <div class="nav-links">
+                <a href="expertise.html">TECH STACK</a>
+                <a href="services.html">CAPABILITIES</a>
+                <a href="track-record.html">IMPACT</a>
+                <a href="contact.html">DEPLOY MVP</a>
+            </div>
         </nav>
-    </header>
-
-    <main>
         <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Strategic Transformation<br>& AI Advisory</h1>
-                    
-                    <p class="hero-subtitle">
-                        Conseil en transformation organisationnelle, intégration IA générative de pointe, 
-                        et excellence opérationnelle mesurable
-                    </p>
-                    
-                    <p class="hero-description">
-                        Nous accompagnons dirigeants et organisations dans la conception et le déploiement 
-                        de transformations stratégiques durables — de l'agilité à l'échelle à l'intégration 
-                        d'IA générative cutting-edge (Claude Opus 4.6, Moltbot, B-mad, rtrvr.ai), 
-                        du développement de leaders à l'excellence digitale.
-                    </p>
-                    
-                    <div class="tech-badges">
-                        <span class="tech-badge featured">Claude Opus 4.6</span>
-                        <span class="tech-badge featured">Moltbot AI Agents</span>
-                        <span class="tech-badge">B-mad</span>
-                        <span class="tech-badge">rtrvr.ai</span>
-                        <span class="tech-badge">SAFe 6 RTE</span>
-                        <span class="tech-badge">LLMOps</span>
-                    </div>
-                    
-                    <a href="contact.html" class="cta-primary">Démarrer avec un MVP Gratuit</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="metrics">
-            <div class="container">
-                <div class="metrics-grid">
-                    <div class="metric-item">
-                        <div class="metric-number">10+</div>
-                        <div class="metric-label">Années Expertise</div>
-                    </div>
-                    <div class="metric-item">
-                        <div class="metric-number">>95%</div>
-                        <div class="metric-label">Prédictibilité</div>
-                    </div>
-                    <div class="metric-item">
-                        <div class="metric-number">15+</div>
-                        <div class="metric-label">Certifications</div>
-                    </div>
-                    <div class="metric-item">
-                        <div class="metric-number">MVP</div>
-                        <div class="metric-label">Gratuit Inclus</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="approach">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Notre Approche</h2>
-                    <p class="section-subtitle">
-                        Une méthodologie éprouvée qui combine rigueur stratégique, technologies de pointe, 
-                        et accompagnement sur-mesure
-                    </p>
-                </div>
-
-                <div class="approach-cards">
-                    <div class="approach-card">
-                        <div class="approach-number">01</div>
-                        <h3>MVP Gratuit</h3>
-                        <p>
-                            Nous démarrons chaque collaboration par un Minimum Viable Product gratuit : 
-                            diagnostic initial, identification des quick wins, et prototype fonctionnel 
-                            pour valider l'approche avant investissement.
-                        </p>
-                        <ul>
-                            <li>Audit stratégique de vos besoins</li>
-                            <li>Identification de 3-5 use cases prioritaires</li>
-                            <li>Prototype ou POC fonctionnel</li>
-                            <li>Roadmap détaillée phase 2</li>
-                        </ul>
-                    </div>
-
-                    <div class="approach-card">
-                        <div class="approach-number">02</div>
-                        <h3>Déploiement Sur-Mesure</h3>
-                        <p>
-                            Une fois le MVP validé, nous structurons un accompagnement adapté à votre 
-                            contexte, budget, et ambitions — avec tarification transparente alignée 
-                            sur la valeur créée.
-                        </p>
-                        <ul>
-                            <li>Intégration technologies de pointe (Opus 4.6, Moltbolt)</li>
-                            <li>Coaching équipes et montée en compétences</li>
-                            <li>Mesure d'impact continue (KPIs définis ensemble)</li>
-                            <li>Évolution progressive selon résultats</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="services-preview">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Domaines d'Expertise</h2>
-                    <p class="section-subtitle">
-                        Sept expertises complémentaires pour accompagner votre transformation de bout en bout
-                    </p>
-                </div>
-
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-number">01</div>
-                        <h3>Transformation Agile & RTE</h3>
-                        <p>
-                            Pilotage de programmes complexes, coordination multi-équipes, 
-                            et déploiement SAFe pour maximiser vélocité et prédictibilité.
-                        </p>
-                        <a href="services.html#transformation" class="service-link">En savoir plus →</a>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-number">02</div>
-                        <h3>IA Générative & Agents Autonomes</h3>
-                        <p>
-                            Intégration Claude Opus 4.6, architecture agents Moltbolt, 
-                            et déploiement LLMOps pour ROI Tech mesurable.
-                        </p>
-                        <a href="services.html#ai" class="service-link">En savoir plus →</a>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-number">03</div>
-                        <h3>Coaching Leaders & Dev Pro</h3>
-                        <p>
-                            Développement de leadership stratégique, transitions de carrière, 
-                            et excellence professionnelle mesurable.
-                        </p>
-                        <a href="services.html#coaching" class="service-link">En savoir plus →</a>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-number">04</div>
-                        <h3>Excellence Professionnelle</h3>
-                        <p>
-                            Image exécutive, présence digitale premium, et cohérence 
-                            stratégique de votre personal brand.
-                        </p>
-                        <a href="services.html#excellence" class="service-link">En savoir plus →</a>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-number">05</div>
-                        <h3>Stratégie Digitale & Growth</h3>
-                        <p>
-                            Marketing digital stratégique, acquisition scalable, 
-                            et optimisation présence online.
-                        </p>
-                        <a href="services.html#digital" class="service-link">En savoir plus →</a>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-number">06</div>
-                        <h3>Solutions Web & Apps</h3>
-                        <p>
-                            Création sites premium, applications sur-mesure, 
-                            et outils digitaux haute performance.
-                        </p>
-                        <a href="services.html#solutions" class="service-link">En savoir plus →</a>
-                    </div>
-                </div>
-
-                <div style="text-align: center; margin-top: 4rem;">
-                    <a href="services.html" class="cta-primary">Voir Tous les Services</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-section">
-            <div class="container">
-                <h2>Démarrons par un MVP Gratuit</h2>
-                <p>
-                    Premier diagnostic stratégique offert + prototype fonctionnel pour valider l'approche 
-                    avant tout engagement financier. Tarification sur-mesure ensuite selon vos besoins réels.
+            <div>
+                <h1>L'ère des <span>Agents</span> est ici.</h1>
+                <p style="color: var(--text-dim); font-size: 1.2rem; margin-bottom: 2.5rem; max-width: 500px;">
+                    Dépassez l'automatisation simple. Déployez des agents autonomes Moltbot capables d'orchestrer vos workflows complexes.
                 </p>
-                <a href="contact.html" class="cta-white">Planifier un Entretien</a>
+                <a href="contact.html" class="cta-btn">Lancer le Diagnostic IA</a>
+            </div>
+            <div class="terminal">
+                <div class="term-header">
+                    <div class="dot" style="background:#ff5f56"></div><div class="dot" style="background:#ffbd2e"></div><div class="dot" style="background:#27c93f"></div>
+                </div>
+                <div class="line">> moltbot init --project "Transformation"</div>
+                <div class="line" style="color:#fff">[INFO] Connecting to rtrvr.ai...</div>
+                <div class="line" style="color:#fff">[INFO] Analysis in progress...</div>
+                <div class="line" style="color:#3B82F6">[OK] 42 Bottlenecks identified.</div>
+                <div class="line" style="color:#3B82F6">[OK] Deployment of 3 Agents successful.</div>
+                <div class="line">> status --active</div>
             </div>
         </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">ALEXIS BENDAVID</div>
-                <div class="footer-address">
-                    Place Vendôme, 75001 Paris, France
-                </div>
-                <ul class="footer-links">
-                    <li><a href="mailto:alexis.bendavid@gmail.com">Email</a></li>
-                    <li><a href="tel:+33680551836">+33 6 80 55 18 36</a></li>
-                    <li><a href="https://linkedin.com/in/alexis-bendavid" target="_blank">LinkedIn</a></li>
-                </ul>
+        <div class="bento">
+            <div class="bento-card large">
+                <h3 style="margin-bottom:1rem">Orchestration Moltbot</h3>
+                <p style="color: var(--text-dim);">Conception d'architectures agentiques où l'IA ne se contente pas de répondre, mais agit sur vos outils (CRM, ERP, Slack).</p>
             </div>
-            <div class="copyright">
-                © 2026 Alexis Bendavid • Strategic Transformation & AI Advisory
+            <div class="bento-card">
+                <h3 style="margin-bottom:1rem">RAG Avancé</h3>
+                <p style="color: var(--text-dim);">Utilisation de rtrvr.ai pour une mémoire d'entreprise sans faille.</p>
+            </div>
+            <div class="bento-card">
+                <h3 style="margin-bottom:1rem">Vision 2026</h3>
+                <p style="color: var(--text-dim);">Prêt pour Claude 3.5 et les futurs modèles SOTA.</p>
+            </div>
+            <div class="bento-card large">
+                <h3 style="margin-bottom:1rem">Place Vendôme</h3>
+                <p style="color: var(--text-dim);">L'excellence du conseil parisien alliée à la vélocité de la Silicon Valley.</p>
             </div>
         </div>
-    </footer>
+    </div>
+    <footer>© 2026 ALEXIS BENDAVID. STRATEGIC TRANSFORMATION & AGENTIC ADVISORY.</footer>
 </body>
 </html>
