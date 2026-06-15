@@ -1,99 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merci | Alexis Bendavid</title>
-    <meta name="description" content="Message reçu. Nous vous recontacterons rapidement.">
-    <meta http-equiv="refresh" content="5;url=index.html">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        :root {
-            --black: #000000;
-            --white: #FFFFFF;
-            --gray-400: #A3A3A3;
-            --gray-600: #525252;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--white);
-            color: var(--black);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 24px;
-        }
-        
-        .thank-you-container {
-            text-align: center;
-            max-width: 600px;
-        }
-        
-        .checkmark {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 32px;
-            background: var(--black);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 40px;
-        }
-        
-        h1 {
-            font-size: 48px;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
-        }
-        
-        p {
-            font-size: 18px;
-            color: var(--gray-600);
-            line-height: 1.6;
-            margin-bottom: 32px;
-            letter-spacing: -0.01em;
-        }
-        
-        .redirect-text {
-            font-size: 14px;
-            color: var(--gray-400);
-            letter-spacing: -0.01em;
-        }
-        
-        a {
-            color: var(--black);
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.2s ease;
-        }
-        
-        a:hover {
-            opacity: 0.7;
-        }
-    </style>
-</head>
-<body>
-    <div class="thank-you-container">
-        <div class="checkmark">✓</div>
-        <h1>Message reçu !</h1>
-        <p>
-            Merci pour votre demande. Nous analyserons votre projet et vous 
-            recontacterons dans les 24-48 heures pour discuter de votre MVP gratuit.
-        </p>
-        <p class="redirect-text">
-            Redirection automatique vers <a href="index.html">l'accueil</a> dans 5 secondes...
-        </p>
-    </div>
-</body>
-</html>
+<html lang="fr"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Merci — Alexis Bendavid</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;box-sizing:border-box}
+body{min-height:100vh;display:grid;place-items:center;background:#05060a;color:#eef0f7;font-family:'Inter',system-ui,sans-serif;text-align:center;padding:24px;overflow:hidden;position:relative}
+.blob{position:fixed;border-radius:50%;filter:blur(90px);opacity:.45;z-index:0}
+.b1{width:46vw;height:46vw;background:#5b2bff;top:-12vw;left:-8vw}
+.b2{width:42vw;height:42vw;background:#1fd6ff;bottom:-14vw;right:-8vw}
+.box{position:relative;z-index:1;max-width:520px}
+.check{width:78px;height:78px;border-radius:50%;background:linear-gradient(110deg,#8b5cff,#1fd6ff);display:grid;place-items:center;margin:0 auto 28px;font-size:2rem;color:#05060a;font-weight:700}
+h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.05;letter-spacing:-.02em}
+p{color:#9aa0b5;margin:18px 0 32px;font-size:1.05rem}
+a{font-family:'Space Grotesk',sans-serif;font-weight:600;text-decoration:none;color:#05060a;background:linear-gradient(110deg,#8b5cff,#1fd6ff);padding:13px 26px;border-radius:100px;display:inline-block;transition:.3s}
+a:hover{transform:translateY(-2px);box-shadow:0 12px 40px -10px rgba(120,90,255,.6)}
+</style>
+</head><body>
+<div class="blob b1"></div><div class="blob b2"></div>
+<div class="box">
+  <div class="check">✓</div>
+  <h1>Merci pour votre message.</h1>
+  <p>Votre demande a bien été reçue. Réponse sous 24h pour planifier votre MVP gratuit.</p>
+  <a href="index.html">← Retour à l'accueil</a>
+</div>
+</body></html>
