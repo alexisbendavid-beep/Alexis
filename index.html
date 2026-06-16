@@ -28,14 +28,14 @@ header.scrolled{background:rgba(251,250,247,.85);backdrop-filter:blur(12px);bord
 .btn-light{background:#fff;color:var(--accent)}.btn-light:hover{background:#eef1f5}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:0}.burger span{width:24px;height:2px;background:var(--ink);transition:.3s}
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:100px;padding-bottom:40px}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
-.hero-visual{display:block}.enso{width:100%;max-width:440px;height:auto;margin-left:auto}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+.hero-visual img{width:100%;height:clamp(380px,54vh,560px);object-fit:cover;border-radius:var(--radius);border:1px solid var(--line);box-shadow:0 30px 70px -34px rgba(20,23,28,.5);display:block}
 .eyebrow{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;display:flex;align-items:center;gap:12px}.eyebrow::before{content:"";width:28px;height:1px;background:var(--accent)}
-h1.title{font-weight:600;font-size:clamp(2.7rem,6.4vw,5.6rem);line-height:1.02;letter-spacing:-.035em;margin:26px 0 0;color:var(--ink)}
+h1.title{font-weight:600;font-size:clamp(2.6rem,6vw,5.2rem);line-height:1.03;letter-spacing:-.035em;margin:26px 0 0;color:var(--ink)}
 h1.title .ac{color:var(--accent)}h1.title .amp{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--muted)}
-.hero p.lead{max-width:520px;color:var(--muted);font-size:clamp(1.05rem,1.5vw,1.22rem);margin-top:28px}
-.hero-cta{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap}
-.kwline{margin-top:90px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;display:flex;flex-wrap:wrap;gap:12px 24px;color:var(--muted);font-size:.85rem;letter-spacing:.02em}
+.hero p.lead{max-width:520px;color:var(--muted);font-size:clamp(1.05rem,1.5vw,1.2rem);margin-top:26px}
+.hero-cta{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap}
+.kwline{margin-top:84px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;display:flex;flex-wrap:wrap;gap:12px 24px;color:var(--muted);font-size:.85rem;letter-spacing:.02em}
 .kwline span{white-space:nowrap}.kwline span+span::before{content:"·";margin-right:24px;color:rgba(20,23,28,.3)}
 section{padding:clamp(84px,14vh,168px) 0}
 h2{font-weight:600;font-size:clamp(2rem,4.4vw,3.4rem);line-height:1.08;letter-spacing:-.03em;margin:18px 0 0;max-width:18ch;color:var(--ink)}
@@ -74,7 +74,7 @@ h2{font-weight:600;font-size:clamp(2rem,4.4vw,3.4rem);line-height:1.08;letter-sp
 .ctile{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:.25s}.ctile:hover{border-color:rgba(20,23,28,.26)}.ctile .k{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}.ctile .v{font-weight:600;font-size:1.02rem;margin-top:6px;word-break:break-all}
 footer{border-top:1px solid var(--line);padding:52px 0 40px}.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}.foot .small{color:var(--muted);font-size:.84rem}.foot-links{display:flex;gap:22px}.foot-links a{color:var(--muted);font-size:.86rem}.foot-links a:hover{color:var(--ink)}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}.reveal.in{opacity:1;transform:none}.reveal.d1{transition-delay:.07s}.reveal.d2{transition-delay:.14s}.reveal.d3{transition-delay:.21s}.reveal.d4{transition-delay:.28s}
-@media(max-width:860px){.navlinks{position:fixed;inset:0;flex-direction:column;justify-content:center;gap:22px;background:var(--bg);transform:translateX(100%);transition:.35s;font-size:1.2rem}.navlinks.open{transform:none}.burger{display:flex;z-index:60}.hero-grid,.grid-2,.grid-3,.contact-grid,.about-grid,.steps{grid-template-columns:1fr}.hero-visual{display:none}.about-photo{max-width:260px}.stats{grid-template-columns:1fr 1fr}.stat{border-bottom:1px solid var(--line)}.stat:nth-child(2){border-right:0}.pub{flex-direction:column;text-align:center}.pub .pgo{margin:0}.imgband{min-height:340px}}
+@media(max-width:860px){.navlinks{position:fixed;inset:0;flex-direction:column;justify-content:center;gap:22px;background:var(--bg);transform:translateX(100%);transition:.35s;font-size:1.2rem}.navlinks.open{transform:none}.burger{display:flex;z-index:60}.hero-grid,.grid-2,.grid-3,.contact-grid,.about-grid,.steps{grid-template-columns:1fr}.hero-visual{margin-top:30px}.hero-visual img{height:300px}.about-photo{max-width:260px}.stats{grid-template-columns:1fr 1fr}.stat{border-bottom:1px solid var(--line)}.stat:nth-child(2){border-right:0}.pub{flex-direction:column;text-align:center}.pub .pgo{margin:0}.imgband{min-height:340px}}
 </style>
 </head>
 <body>
@@ -99,7 +99,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}.foot{display:flex;j
 <p class="lead reveal d2">Faire passer l’IA du prototype à un système fiable, à l’échelle et créateur de valeur. Chaque mission démarre par un MVP offert.</p>
 <div class="hero-cta reveal d3"><a href="#contact" class="btn btn-primary">Démarrer avec un MVP gratuit</a><a href="#expertise" class="btn btn-ghost">Explorer l’expertise</a></div>
 </div>
-<div class="hero-visual reveal d2"><svg class="enso" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><pattern id="dg" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#d7d3ca"/></pattern></defs><rect x="40" y="40" width="300" height="300" fill="url(#dg)"/><circle cx="210" cy="210" r="150" fill="none" stroke="#e4e1d8" stroke-width="1"/><circle cx="210" cy="210" r="150" fill="none" stroke="#1b3a5b" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="820 130" transform="rotate(-32 210 210)"/><circle cx="330" cy="120" r="5" fill="#1b3a5b"/><circle cx="120" cy="330" r="3.5" fill="#24507e"/></svg></div>
+<div class="hero-visual reveal d2"><img src="https://images.unsplash.com/photo-1776914579657-3396d13eb13e?auto=format&amp;fit=crop&amp;w=1400&amp;q=72" alt="Quartier d’affaires" loading="eager" /></div>
 </div>
 <div class="kwline reveal d4"><span>Claude Opus 4</span><span>AI Agents</span><span>Automatisation</span><span>n8n</span><span>LLMOps</span><span>RAG</span><span>SAFe 6</span><span>RTE</span><span>POC en 2 semaines</span></div>
 </div></section>
@@ -156,7 +156,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}.foot{display:flex;j
 <div class="step reveal d3"><div class="sn">03</div><h4>Déploiement</h4><p>Mise à l’échelle pilotée par la valeur.</p></div>
 <div class="step reveal d4"><div class="sn">04</div><h4>Mesure</h4><p>KPIs co-définis et suivi d’impact continu.</p></div>
 </div></div></section>
-<section style="padding-top:0"><div class="wrap"><div class="imgband reveal"><img src="https://images.unsplash.com/photo-1776914579657-3396d13eb13e?auto=format&amp;fit=crop&amp;w=1800&amp;q=70" alt="Quartier d’affaires" loading="lazy" /><div class="ov"></div><div class="inner"><div class="lbl">La conviction</div><h2>Du prototype à la production, en conditions réelles.</h2><p>La plupart des organisations expérimentent l’IA. Très peu la passent à l’échelle avec un vrai impact. C’est là que j’interviens.</p></div></div></div></section>
+<section style="padding-top:0"><div class="wrap"><div class="imgband reveal"><img src="https://images.unsplash.com/photo-1755650499079-1b0aab94f72e?auto=format&amp;fit=crop&amp;w=1800&amp;q=70" alt="Quartier d’affaires" loading="lazy" /><div class="ov"></div><div class="inner"><div class="lbl">La conviction</div><h2>Du prototype à la production, en conditions réelles.</h2><p>La plupart des organisations expérimentent l’IA. Très peu la passent à l’échelle avec un vrai impact. C’est là que j’interviens.</p></div></div></div></section>
 <section id="references"><div class="wrap">
 <div class="eyebrow reveal">Références</div>
 <h2 class="reveal d1">Là où j’ai livré, à grande échelle.</h2>
@@ -167,7 +167,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}.foot{display:flex;j
 <div class="tcard reveal d2"><div class="q">« 10 équipes synchronisées sur 4 entités, 100+ ateliers, gouvernance alignée jusqu’au COMEX. »</div><div class="tperson"><div class="tav">CA</div><div><div class="tn">Crédit Agricole CIB</div><div class="tr">Programme multi-trains</div></div></div></div>
 <div class="tcard reveal d3"><div class="q">« 77 workflows Jira unifiés en un MVP modulaire, capable d’absorber le changement. »</div><div class="tperson"><div class="tav">BT</div><div><div class="tn">Bouygues Telecom</div><div class="tr">Rationalisation & MVP</div></div></div></div>
 </div></div></section>
-<section id="services"><div class="wrap"><div class="cta-band reveal"><img src="https://images.unsplash.com/photo-1755650499079-1b0aab94f72e?auto=format&amp;fit=crop&amp;w=1800&amp;q=70" alt="" loading="lazy" /><div class="ov"></div><div class="inner">
+<section id="services"><div class="wrap"><div class="cta-band reveal"><img src="https://images.unsplash.com/photo-1776914579657-3396d13eb13e?auto=format&amp;fit=crop&amp;w=1400&amp;q=72" alt="" loading="lazy" /><div class="ov"></div><div class="inner">
 <div class="lbl">Démarrons</div>
 <h2 class="reveal d1">Un MVP gratuit pour prouver la valeur.</h2>
 <p class="reveal d2">Diagnostic stratégique offert + prototype fonctionnel, avant tout engagement. Tarification sur-mesure ensuite.</p>
